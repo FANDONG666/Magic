@@ -1,0 +1,24 @@
+/*首页*/
+
+.navs form em{height: 1px;background: #CCCCCC;margin: 20px 15px 0;}
+.navs select{padding: 0;height: 40px;}
+.navs span{text-align: right;padding: 0;height: 40px;line-height: 40px;font-size: 14px;color: #000000;}
+.tex2{border: 1px solid #CCCCCC;border-radius: 2px;height: 40px;font-size: 18px;color: #999;}
+#tex{margin-left: 37px;border: 1px solid #e3e3e3;border-radius: 3px;height: 40px;font-size: 14px;color: #999;}
+#sbm{height: 40px;line-height: 40px;background: #FFFFFF;border: 1px solid #e3e3e3;border-left: 0;}
+.btm_page{background: #FFFFFF;margin-bottom: 30px;}
+.classify{height: 60px;font-size: 14px;line-height: 60px;}
+.classify span{color: #000000;text-align: center;}
+.btm_page li{text-align: center;height: 64px;line-height: 64px;}
+.btm_page ul{padding: 0;}
+.btm_page ul:nth-child(even){background: #f9f9f9;}
+.btm_page li img{padding: 8px;vertical-align: middle;}
+.btm_p{height: 90px;background: #FFFFFF;}
+.btm_p p{width: 345px;margin-top: 20px;border: 1px solid #CCCCCC;float: right;height: 30px;} 
+.btm_p span{cursor: pointer;display: inline-block;width: 49px;height: 30px;line-height: 30px;text-align: center;font-size: 14px;border-right: 1px solid #999;}
+.btm_p em{cursor: pointer;display: inline-block;width: 49px;height: 30px;line-height: 30px;text-align: center;font-size: 14px;color: #000;border-right: 1px solid #999;}
+.btm_p .pre_r{border: 0;}
+.btm_p span:hover{background: #204D74;color: #FFFFFF;}
+.btm_p em:hover{color: #D43F3A;}
+.mid_x{height: 1px;background: #CCCCCC;margin: 20px 15px 0;}
+.btm_page a{color: #23649e;}

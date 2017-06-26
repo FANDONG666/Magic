@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>稿件结算</title>
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/settlement.css">
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/ui.css" />
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/ui.js"></script>
+	 <script>
+		  $( function() {
+		    $( "#datepicker").datepicker();
+		    $( "#datepicker1").datepicker();
+		  } );
+ 	 </script>
+</head>
+<body>
+	<div class="warp">
+		<header class="cf" style="border:0;">
+			<img class="fl" src="../img/logo.png" alt="">
+			<div class="user fr cf">
+				<div class="headPortrait fl"><img src="../img/tx.png" alt=""></div>
+				<div class="userName fl">可乐乐</div>
+				<img class="exit fr" src="../img/exit.png" alt="">
+			</div>
+		</header>
+		<ul class="nav">
+			<li>
+				<a href="index.html">
+					<img src="../img/icon1.png" alt=""><span>首页</span>
+				</a>
+			</li>
+			<li>
+				<a href="personalInformation.html">
+					<img src="../img/icon2.png" alt=""><span>个人信息</span>
+				</a>
+			</li>
+			<li class="aaa">
+				<a href="contribute.html">
+					<img src="../img/icon3.png" alt=""><span>稿件投稿</span>
+				</a>
+			</li>
+			<li>
+				<a href="settlement.html">
+					<img src="../img/icon4.png" alt=""><span>稿件结算</span>
+				</a>
+			</li>
+			<li>
+				<a href="newsCenter.html">
+					<img src="../img/icon6.png" alt=""><span>新闻中心</span>
+				</a>
+			</li>
+		</ul>
+		<div class="centent">
+			<div class="top cf">
+				<ul>
+					<li><img src="../img/icon7.png" alt=""><span class="spanSS">草稿箱</span></li>
+					<li><img src="../img/icon8.png" alt=""><span class="spanSS">待审核</span></li>
+					<li><img src="../img/icon9.png" alt=""><span class="spanSS">审核失败</span></li>
+					<li><img src="../img/icon10.png" alt=""><span class="spanSS">待发布</span></li>
+					<li><img src="../img/icon11.png" alt=""><span class="spanSS">已发布</span></li>
+				</ul>
+				<div class="ipts cf">
+					<div class="spans1 fl">
+						<span>选择时间</span>
+						<input type="date" id="datepicker">
+						<span class="zhi">至</span>
+						<input type="date" id="datepicker1">
+						<a class="query" href="javascript:;">查询</a>
+					</div>
+					<div class="spans2 fl">
+						<span>关键字查询</span>
+						<input class="queryIpt" type="text" placeholder="请输入稿件标题关键字">
+						<a class="query" href="javascript:;">查询</a>
+					</div>
+				</div>
+				<table>
+						<tr>
+							<th>投稿时间</th>
+							<th>稿件标题</th>
+							<th>类型</th>
+							<th>以获取稿费</th>
+							<th>审核状态</th>
+							<th>发布状态</th>
+							<th>7天最高阅读量</th>
+							<th>引导成交金额</th>
+
+
+						</tr>
+						<tr>
+							<td>2017-4-13</td>
+							<td><a href="javascript:;">价值500元进口家居类产品单品评测</a></td>
+							<td>图文</td>
+							<td>80元</td>
+							<td>媒体未审核</td>
+							<td><div class="imgBOX"><img src="../img/Taobao.png" alt=""><img src="../img/wechat.png" alt=""></div></td>
+							
+							<td>123123</td>
+							<td>123123元</td>
+						</tr>
+						<tr>
+							<td>2017-4-13</td>
+							<td><a href="javascript:;">价值500元进口家居类产品单品评测</a></td>
+							<td>图文</td>
+							<td>80元</td>
+							<td>媒体未审核</td>
+							<td><div class="imgBOX"><img src="../img/Taobao2.png" alt=""><img src="../img/wechat.png" alt=""></div></td>
+							<td>123123</td>
+							<td>123123元</td>
+						</tr>
+						<tr>
+							<td>2017-4-13</td>
+							<td><a href="javascript:;">价值500元进口家居类产品单品评测</a></td>
+							<td>图文</td>
+							<td>80元</td>
+							<td>媒体未审核</td>
+							<td><div class="imgBOX"><img src="../img/Taobao.png" alt=""><img src="../img/wechat.png" alt=""></div></td>
+							<td>123123</td>
+							<td>123123元</td>
+						</tr>
+						<tr>
+							<td>2017-4-13</td>
+							<td><a href="javascript:;">价值500元进口家居类产品单品评测</a></td>
+							<td>图文</td>
+							<td>80元</td>
+							<td>媒体未审核</td>
+							<td><div class="imgBOX"><img src="../img/Taobao.png" alt=""><img src="../img/wechat2.png" alt=""></div></td>
+							<td>123123</td>
+							<td>123123元</td>
+						</tr>
+						<tr>
+							<td>2017-4-13</td>
+							<td><a href="javascript:;">价值500元进口家居类产品单品评测</a></td>
+							<td>图文</td>
+							<td>80元</td>
+							<td>媒体未审核</td>
+							<td><div class="imgBOX"><img src="../img/Taobao.png" alt=""><img src="../img/wechat.png" alt=""></div></td>
+							<td>123123</td>
+							<td>123123元</td>
+						</tr>
+						<tr>
+							<td>2017-4-13</td>
+							<td><a href="javascript:;">价值500元进口家居类产品单品评测</a></td>
+							<td>图文</td>
+							<td>80元</td>
+							<td>媒体未审核</td>
+							<td><div class="imgBOX"><img src="../img/Taobao.png" alt=""><img src="../img/wechat.png" alt=""></td>
+							<td>123123</td>
+							<td>123123元</td>
+						</tr>
+				</table>
+
+				<div class="turns fr">
+					<span><a href="JavaScript:;">首页</a></span>
+					<span><a href="JavaScript:;">上一页</a></span>
+					<span class="nums">
+						<a href="JavaScript:;">1</a>
+						<a href="JavaScript:;">2</a>
+						<a href="JavaScript:;">3</a>
+						<a href="JavaScript:;">4</a>
+						<a href="JavaScript:;">5</a>
+					</span>
+					<span><a href="JavaScript:;">下一页</a></span>
+					<span><a href="JavaScript:;">尾页</a></span>
+					<span><a href="JavaScript:;">共5页</a></span>
+				</div>
+			</div>
+			<div class="bottom">
+				<p class="p1 cf"><img class="fl" src="../img/icon12.png" alt=""><span class="fl">稿费结算</span></p>
+				<p class="p2">
+					累积稿费1700元，
+					基础稿费1300元，
+					奖励稿费400元，
+					已结算900元
+				</p>
+				<p class="p3">
+				<span >
+					<span>待结算金额：</span>
+					<span class="val">800元</span>
+				</span>
+				<input class="iptss" type="text"></p>
+				<p class="p4 cf">
+					<span>
+						<span>姓名：</span>
+						<span class="val">可乐乐</span>
+						<input class="iptss" type="text">
+					</span>
+					<span class="account ">
+						<span>结算账号（支付宝）：</span>
+						<span class="val">17319300529</span>
+						<input class="iptss" type="text">
+					</span>
+					<a class="modify" href="javascript:;">修改</a>
+					<a class="complete" href="javascript:;">完成</a>
+					<a class="settlementBtn fr" href="javascript:;">申请结算</a>
+				</p>
+
+			</div>
+		</div>
+	</div>
+	<div class="mask">
+		<div class="dialog">
+			<p class="p1">提现人姓名：可乐乐</p>
+			<p class="p2">支付宝账号：17319300529</p>
+			<p class="p3"><span>提现金额：</span><input class="txIpts" type="text"></p>
+			<p class="p4 tjBtns"><span class="spanY">确定</span><span class="spanN">取消</span></p>
+			<div class="success"><img class="suOver" src="../img/over.png" alt=""><span class="suBtn">提交成功</span></div>
+		</div>
+	</div>
+	
+	<!--左边导航菜单-->
+	<script type="text/javascript" src="../js/menuSwitch.js"></script>
+	<!--修改滚动条-->
+	<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="../js/scrollBar.js"></script>
+	<script type="text/javascript">
+		$('.modify').click(function(){
+			$('.iptss').show();
+			$('.val').hide();
+			$('.modify').hide();
+			$('.complete').show();
+
+		})
+		$('.complete').click(function(){
+			$('.iptss').hide();
+			$('.val').show();
+			$('.modify').show();
+			$('.complete').hide();
+
+		})
+		$(".spanSS").click(function(){
+			$(".spanSS").removeClass("addspanSS");
+			$(this).addClass('addspanSS');
+		})
+		$(".spanY").click(function(){
+			$('.dialog P').hide();
+			$('.success').show();
+			$('.suOver').show();
+			setTimeout(function(){
+				$('.mask').hide();
+				$('.dialog P').show();
+				$('.suOver').hide();
+			},1000);
+		})
+		$(".spanN").click(function(){
+			$('.mask').hide();
+		})
+
+		$(".settlementBtn").click(function(){
+			$('.mask').show();
+		})
+		
+	</script>
+</body>
+</html>

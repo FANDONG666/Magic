@@ -1,0 +1,133 @@
+html, body, ul, li, ol, dl, dd,form,input, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+html,body{width: 100%;margin: 0;background: #ffffff;}
+html{font-size: 62.5%;}
+fieldset, img, input, button {
+    border: none;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+	display: block;
+    border: 0;
+    vertical-align: middle;
+}
+body { 
+    color: #666;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+}
+li{list-style: none;}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+.mi-right ul{height: 805px;}
+
+
+/*公共*/
+/*首页*/
+.topP{height: 65px;background: #FFFFFF;}
+.posD{height: 50px;}
+.posD img{height: 20px;margin-top: 3px;margin-right: 10px;display: inline-block;}
+.posD a{margin-right: 10px;display: inline-block;height: 50px;line-height: 50px;font-size: 12px;color: #333333;text-decoration: none;}
+.posD span{margin-right: 10px;display: inline-block;height: 50px;line-height: 50px;font-size: 12px;color: #333333;}
+.posD a:hover{color: #fd0000;}
+.screen{height: 48px;margin: 0 0 1px;background: #FFFFFF;}
+.screen p{margin-left: 18px;float: left;font-size: 18px;height: 48px;line-height: 48px;color: #000;}
+.screen h4{float: right;font-size: 12px;height: 48px;line-height: 48px;color: #CCCCCC;}
+.screen h5{float: right;font-size: 12px;height: 48px;line-height: 48px; #CCCCCC;margin-right:44px;margin-left: 27px;}
+.navs{background: #FFF;margin-bottom: 12px;padding-bottom: 25px;}
+.navs p{height: 30px;margin-top:10px;margin-bottom: 10px;text-align: right;color: #aaaaaa;padding: 0;line-height: 30px;}
+.navs ul{height: 30px;margin-top:10px;margin-bottom: 10px;}
+.navs li{float: left;margin-right: 15px;height: 30px;line-height: 30px;font-size: 14px;padding: 0 5px;}
+.navs li:hover{background: #23649e;}
+.navs li:hover a{color: #fff;}
+.navs li:hover span{color: #fff;}
+.navs .cread{background: #23649e;}
+.navs .cread a{color: #fff;}
+.navs .cread span{color: #fff;}
+.navs li a{color: #bfbfbf;}
+.navs li span{color: #bfbfbf;}
+.navs a{text-decoration: none;}
+
+form{margin-bottom: 20px;}
+.navs select{padding: 0;height: 40px;font-size: 14px;text-indent: 1em;}
+
+
+/*左边*/
+
+body{background: #f0f3f4;}
+.container-fluid:after{ 
+	content:".";        
+     display:block;        
+     height:0;        
+     clear:both;        
+     visibility:hidden; 
+     background: #f0f3f4;  }
+ .topLeft{
+ 	float: left;
+ 	width: 204px;
+ 	height: 900px;
+ 	background: #1c2b36;
+ 	z-index: 999;
+ } 
+ .topLeft .aaaa i{display: inline-block;height: 100%;width: 40px;text-align: right;cursor: pointer;}
+ .topLeft .log{height: 105px;width: 100%;}  
+ .topLeft .log img{padding-top: 20px;width: 95px;margin-left: 50px;}
+ .topLeft ul{width: 204px;}
+.topLeft ul li{margin: 8px 0;height: 40px;padding-left: 20px;position: relative;}
+.topLeft ul li i{position: absolute;top: 8px;right: 15px;display: inline-block;font-size: 16px;}
+.topLeft ul .cread{background: #17242d;}
+.topLeft ul .cread span{color: #FFF;}
+.topLeft li img{float: left;margin-right: 10px;width: 20px;margin-top: 10px;}
+.topLeft ul li:hover{background: #17242d;}
+.topLeft ul div span{margin-left: 30px;}
+.topLeft ul li:hover span{color: #FFF;}
+.topLeft li span{float: left;font-size: 14px;color: #5a6b77;height: 40px;line-height: 40px;}
+.topLeft li em{float: left;font-size: 14px;color: #5a6b77;height: 40px;line-height: 40px;}
+body .topLeft ul div{height:auto;overflow: hidden;}
+body .layui-layer-title{background: #fff;}
+.col-lg-12 li{padding: 0;}
+.classify span{padding: 0;}
+.col-lg-12 li strong{padding: 0;} 
+.col-lg-12 li em{padding: 0;} 
+.col-lg-12 li span{padding: 0;} 
+.col-lg-12 li i{padding: 0;} 

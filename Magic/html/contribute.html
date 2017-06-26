@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>稿件投稿</title>
+		<link rel="stylesheet" href="../css/public.css">
+		<link rel="stylesheet" href="../css/contribute.css">
+		<link rel="stylesheet" href="../css/wangEditor.min.css">
+	</head>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.Jcrop.js"></script>
+	<script type="text/javascript">
+        var obj={
+            gg:function(){
+                var api;
+//                $(".jcrop-holder").remove();
+//                var ww=parseInt($('#imghead').css('width'));
+//                var hh=parseInt($('#imghead').css('height'));
+//                console.log(ww);
+//                if(ww<750||hh<350){
+//                    alert('1');
+//                    $('.span5').click();
+//                }
+                $('.target').Jcrop({
+                    // start off with jcrop-light class
+                    bgOpacity: 0.5,
+                    bgColor: 'white',
+//                    addClass: 'jcrop-light',
+                    onSelect: updateCoords
+                }, function(){
+                    api = this;
+                    var imgCut=api.getBounds();
+                    var img_w=parseInt(imgCut[0]);
+                    var img_h=parseInt(imgCut[1]);
+                    $("#true_w").val(img_w);
+                    api.setSelect([130, 65, 130 + 350, 65 + 285]);
+                    api.setOptions({
+                        bgFade: true
+                    });
+                    api.ui.selection.addClass('jcrop-selection');
+                });
+            }
+        }
+        function updateCoords(c)
+        {
+            $('#x').val(c.x);
+            $('#y').val(c.y);
+            $('#w').val(c.w);
+            $('#h').val(c.h);
+        };
+	</script>
+
+	<link rel="stylesheet" href="../css/jquery.Jcrop.css" type="text/css" />
+	<!--<link rel="stylesheet" href="../css/jquery.Jcrop.extras.css" type="text/css" />-->
+	<body>
+		<div class="warp">
+			<div class="tailor">
+				<div class="tailor1">
+					<img src="../img/girl.png"  class="target"/>
+					<div class="ann"><span class="span4" onclick="sureSort();">确定</span><span class="span5" onclick="cancelSort();">取消</span></div>
+				</div>
+			</div>			
+			<header class="cf" style="border:0;">
+				<img class="fl logo" src="../img/logo.png" alt="">
+				<div class="user fr cf">
+					<div class="headPortrait fl"><img src="../img/tx.png" alt=""></div>
+					<div class="userName fl">可乐乐</div>
+					<img class="exit fr" src="../img/exit.png" alt="">
+				</div>
+			</header>
+			<ul class="nav fl">
+					<li>
+						<a href="index.html">
+							<img src="../img/icon1.png" alt=""><span>首页</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="personalInformation.html">
+							<img src="../img/icon2.png" alt=""><span>个人信息</span>
+						</a>
+					</li>
+					<li class="aaa">
+						<a href="contribute.html">
+							<img src="../img/icon3.png" alt=""><span>稿件投稿</span>
+						</a>
+					</li>
+					<li>
+						<a href="settlement.html">
+							<img src="../img/icon4.png" alt=""><span>稿件结算</span>
+						</a>
+					</li>
+					<li>
+						<a href="newsCenter.html">
+							<img src="../img/icon6.png" alt=""><span>新闻中心</span>
+						</a>
+					</li>
+			</ul>
+			<div class="centent fr cf">
+				<form action="" method="post">
+					<div class="left fl">
+						<p>请输入稿件标题（14个字以内)</p>
+						<input class="ipt1 ipt" id="gjbt" type="text" required="required" maxlength="14">
+						<p>请输入稿件副标题（22个字以内)</p>
+						<textarea class="ipt2 ipt" id="gjfbt" required="required" maxlength="22"></textarea>
+						<p><span>请选择稿件类型（必选）</span><span class="prompt">*只能选择一种稿件类型</span></p>
+						<ul class="ckBoxs">
+							<li><input class="radio" type="radio" name="choose"><span class="wz">图文</span></li>
+							<li><input class="radio" type="radio" name="choose"><span class="wz">导购</span></li>
+							<li><input class="radio" type="radio" name="choose"><span class="wz">国际导购</span></li>
+							<li><input class="radio" type="radio" name="choose"><span class="wz">视频</span></li>
+							<li><input class="radio" type="radio" name="choose"><span class="wz">评测</span></li>
+						</ul>
+							<div class="uploadBox">
+								<div id="preview">
+									<!-- <div class="span9">
+								    	<img src="demo_files/sago.jpg" id="target" alt="Jcrop Image" />
+								    </div>-->
+									<img class="addImg" src="../img/tjtp.png">
+									<p class="hideP">稿件封面链接，尺寸不小于750*350 图片不得有水印</p>
+								</div>
+								<input type="file" onChange="previewImage1(this)" style="visibility: hidden;"  id="previewImg">
+
+							</div>
+							<div class="btnss">
+								<span class="span1">存草稿箱</span>
+								<span class="span2 contribute">投稿</span>
+								<span class="span3 preview">预览</span>
+							</div>
+					</div>
+				</form>
+				<div class="rights fr">
+					<div class="bjq">编辑器</div>
+					<div class="insetsss">插入商品</div>
+					<div id="editor" ></div>
+				</div>
+
+			</div>
+			<div class="maskBox">
+				<div class="fix">
+					<div class="maskClose">X</div>
+					<div class="mask">
+						<div class="maskBt"></div>
+						<div class="maskFbt"></div>
+						<div class="maskFm"></div>
+						<div class="masktext"></div>
+						<div class="maskImg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="maskLayer">
+				<div class="outter">
+					<div class="out_top">
+						<div class="colse">X</div>
+						<span class="spName">商品链接</span>
+						<input class="urls" type="text">
+					</div>
+					<div class="out_left right-text" id="rightText">
+						<div class="out_leftImg" id="out_leftImg">
+							<img class="xnh" src="../img/sctp.png" alt="">
+							<img class="xnh" src="../img/sctp.png" alt="">
+							<img class="xnh" src="../img/sctp.png" alt="">
+							<img class="xnh" src="../img/sctp.png" alt="">
+						</div>
+
+					</div>
+					<div class="out-right">
+						<p class="pss">
+							<span class="sjSpan">售价48.9</span>
+							<span>佣金：</span><span>5%</span>
+						</p>
+						<input class="iptts iptts1" type="text">
+						<input class="iptts iptts2" type="text" maxlength="25">
+						<input class="iptts btnns" type="button" value="标题字数不超过25个字">
+						<div class="scBar">
+							<span class="inerstp">上传图片</span>
+							<span class="inersSP">插入这个商品</span>
+						</div>
+					</div><input type="file" onChange="previewImage3(this)" style="display:none" id="previewImg3">
+				</div>
+			</div>
+			<div class="bomB">
+				<div class="widthKuang">
+					<img class="wc" src="../img/wc.png" alt="">
+					<span class="gxcg">恭喜您投稿成功</span>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../js/wangEditor.js"></script>
+		<!--左边导航-->
+		<script type="text/javascript" src="../js/menuSwitch.js"></script>
+		<!--滚动条-->
+		<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+		<script type="text/javascript" src="../js/scrollBar.js"></script>
+		<script type="text/javascript" src="../js/upLoad.js"></script>
+		<!--编辑器-->
+	</body>
+
+</html>
+<script type="text/javascript">
+	/*不让粘贴图片*/
+    function sureSort(){
+//            $(".jcrop-holder").remove();
+        $('.tailor').html('<div class="tailor1"> <img src="../img/girl.png"  class="target"/><div class="ann"><span class="span4" onclick="sureSort();">确定</span><span class="span5" onclick="cancelSort();">取消</span></div></div>');
+        $(".tailor").hide();
+    }
+    function cancelSort(){
+//            $(".jcrop-holder").remove();
+        $('.tailor').html('<div class="tailor1"> <img src="../img/girl.png"  class="target"/><div class="ann"><span class="span4">确定</span><span class="span5">取消</span></div></div>');
+        $(".tailor").hide();
+        $('#imghead').hide();
+        $('.imgRemove').hide();
+        $('#preview').html("");
+        $('#preview').html('<img class="addImg addImg2" src="../img/tjtp.png">' +
+            '<p class="hideP">稿件封面链接，尺寸不小于750*350 图片不得有水印</p>');
+    }
+    $(function() {
+        $('#editor').bind('contextmenu', function(e){
+            return false;
+        });
+        $('#editor').keydown(function(event) {
+            if (event.ctrlKey==true && ( event.which == '86')) {
+                event.preventDefault();
+            }
+        });
+        var editor = new wangEditor('editor');
+        // 上传图片
+        editor.config.uploadImgUrl = '../ouplay';
+        editor.config.uploadParams = {
+            // token1: 'abcde',
+            // token2: '12345'
+        };
+        editor.config.uploadHeaders = {
+            // 'Accept' : 'text/x-json'
+        }
+        // editor.config.uploadImgFileName = 'myFileName';
+        // 隐藏网络图片
+        // editor.config.hideLinkImg = true;
+        // 自定义菜单
+        editor.config.menus = [
+            'bold',
+            'underline',
+            'italic',
+            'alignleft',
+            'aligncenter',
+            'alignright',
+            'img',
+            'uploadImg',
+            ' linkImg',
+        ];
+        editor.create();
+
+        //插入商品效果
+        $(".insetsss").click(function() {
+            $('.maskLayer').show();
+			/*	$('.sctp').removeClass("sctp");
+			 */
+        })
+        $('.colse').click(function() {
+            $('.maskLayer').hide();
+        })
+
+        //手机预览效果
+        $('.preview').on("click", function() {
+            $('.maskBox').show();
+            var a = $('#gjbt').val();
+            var b = $('#gjfbt').val();
+            var c = $('.uploadBox').html();
+            var f = $('.wangEditor-txt').html();
+            $('.maskBt').html(a);
+            $('.maskFbt').html(b);
+            $('.masktext').html(f);
+			/*修改预览*/
+            $('.masktext a').css({
+                "float": "left",
+                "width": "27%"
+            })
+            $(".masktext .scnr11 div").css({
+                "overflow": "hidden",
+                "line-height": "17px",
+                "font-size": "12px",
+                "height": "17px",
+                "color": "#FD2222",
+                "letter-spacing": "1px"
+            })
+            $('.masktext img').css({
+                "height": "51px",
+                "display": "inline-block"
+            })
+            $(".masktext .hideDIV .scnr11").css({
+                "float": "right;",
+                "width": "73%",
+                "line-height": "17px",
+                "font-size": "12px"
+            })
+            $(".masktext .scnr11 .scbt21").css({
+                "overflow": "hidden",
+                "line-height": "17px",
+                "font-size": "12px",
+                "height": "34px",
+                "color": "#000",
+                "letter-spacing": "1px"
+            })
+
+            if($(".uploadBox img").attr('id') == "imghead") {
+                $(".maskFm").html(c);
+            } else {
+                $('.maskFm').html(null);
+            }
+        })
+
+        //点击关闭预览效果
+        $('.maskClose').click(function() {
+            $('.maskBox').hide();
+        })
+
+        //投稿点击事件
+        $('.contribute').on("click", (function() {
+            $('.bomB').show();
+            setTimeout(function() {
+                $('.bomB').hide();
+            }, 1000);
+            if($('#gjbt').val().length != 0) {
+                $('#gjbt').css("border-color", "#bbb");
+            } else {
+                $('#gjbt').css("border-color", "red");
+            }
+            if($('#gjfbt').val().length != 0) {
+                $('#gjfbt').css("border-color", "#bbb");
+            } else {
+                $('#gjfbt').css("border-color", "red");
+            }
+        }))
+
+        //上传稿件封面图片
+        $("#preview").on("click", function() {
+            $('#previewImg').click();
+        })
+        //删除上传的图片
+        //把图片插入到 编辑器
+        $(".insertImg").on('click', function() {
+            $('#previewImg2').click();
+        })
+
+        $(".editBoxss_img").click(function() {
+            $('#previewImg2').click();
+        })
+
+        //上传图片
+        $(".inerstp").on("click", function() {
+            $('#previewImg3').click();
+
+            $("#rightText img").removeAttr('id');
+
+        })
+
+        $(".out_leftImg").on("click", "img", function() {
+            var index = $(".out_leftImg img").index($(this));
+            $(".out_leftImg img").removeClass('addBorder');
+            $(".out_leftImg img").eq(index).addClass('addBorder');
+
+        })
+        $(function(){
+            var target="";
+            var append=true;
+            var oldChild="";
+            $('#editor').on('click',function(e){
+                var target=e.target;
+                if($(target).attr('id')=='editor'||$(target).hasClass('wangEditor-container')){
+                    append=true;
+                } else{
+                    append=false;
+                    if(target.nodeName!="P"){
+                        while(!$(target).hasClass('hideDIV')){
+                            target=target.parentNode;
+                        }
+                    }
+                    oldChild=$(target);
+                }
+            });
+            $('.inersSP').on('click', function(){
+                var aaa;
+                var tpVal = $("#rightText").html();
+                var bt1Val = $(".iptts1").val();
+                var bt2Val = $(".iptts2").val();
+                var sj = $('.sjSpan');
+                var sj2 = $('.sjSpan').clone();
+                $('.maskLayer').hide();
+                aaa = '<div class="cf hideDIV">' +
+                    '<a href="" class="scfmtp scfmtp1"></a>' +
+                    '<div class="scnr scnr11">' +
+                    '<div class="scbt2 scbt21"></div>' +
+                    '<div class="scsj"></div>' +
+                    '</div>' +
+                    '</div><p><br></p>';
+                if(append==true){
+                    $('#editor').append(aaa);
+                }else if(append==false){
+                    if(oldChild[0].nodeName="P"&&oldChild[0].innerHTML!="<br>"){
+                        oldChild.before(aaa);
+                    }else{
+                        oldChild.after(aaa);
+                    }
+                }
+                $('.scsj').append(sj2.html());
+                $('.scsj').removeClass("scsj");
+                if($(".iptts2").val().length > 25) {
+                    $(".iptts2").val($(".iptts2").val().substring(0, 25));
+                }
+                $('.scbt2').html($(".iptts2").val());
+
+                $('.scbt2').removeClass("scbt2");
+                var cxf = $('.scfmtp');
+                if($(".out_leftImg img").hasClass('addBorder')) {
+                    $('.scfmtp').append($(".out_leftImg .addBorder"));
+                    $("img.addBorder").removeClass("addBorder");
+                    $('.scfmtp').removeClass("scfmtp");
+                    $("#imghead3").removeAttr('id');
+                }
+                var gdq = $(".urls").val();
+                $(".hideDIV .scfmtp1").attr("href", gdq)
+                $(".scfmtp1").removeClass("scfmtp1");
+                var aa = $('.scsj').html();
+                var bb = $('.scbt2').html();
+                $('.out_left').hide();
+                $('.out-right').hide();
+                $('.urls').val('');
+                $('.iptts2').val('');
+                $('.iptts1').val('');
+                $(".out_leftImg").html("")
+                $("#rightText img").show()
+            })
+        });
+        $(".urls").change(function() {
+            if($(".urls").val() != '') {
+                $('.out_left').show();
+                $('.out-right').show();
+            }
+        })
+    });
+</script>
+<script>
+	 //图片上传预览    IE是用了滤镜。
+        function previewImage1(file)
+        {
+          var MAXWIDTH  = 150; 
+          var MAXHEIGHT = 150;
+          var div = document.getElementById('preview');
+          if (file.files)
+          {
+              div.innerHTML ='<img id=imghead>';
+              var img = document.getElementById('imghead');
+              img.onload = function(){
+                 var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                 img.width  =  rect.width;
+                 img.height =  rect.height;
+              }
+              var reader = new FileReader();
+          	  reader.onload = function(evt){img.src = evt.target.result;
+	          	  if($("#preview img").attr('id') == 'imghead'){
+	             	var img_src =$("#imghead").attr("src");
+	             	$(".tailor img.target").attr('src',img_src);
+	             	$(".tailor").show();
+                        obj.gg();
+	             }
+          	  }
+            reader.readAsDataURL(file.files[0]);
+          }
+          else //兼容IE
+          {
+            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=imghead>';
+            var img = document.getElementById('imghead');
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+          }
+        }
+         function previewImage2(file)
+        {
+          var MAXWIDTH  = 150; 
+          var MAXHEIGHT = 150;
+          var div = document.getElementById('editBoxss_img');
+          if (file.files )
+          {
+              div.innerHTML ='<img id=imghead2 class=imghead2 onclick=$("#editBoxss_img").click()>';
+              var img = document.getElementById('imghead2');
+              img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width  =  rect.width;
+                img.height =  rect.height;
+              }
+              var reader = new FileReader();
+              reader.onload = function(evt){img.src = evt.target.result;}
+              reader.readAsDataURL(file.files[0]);
+          }
+          else //兼容IE
+          {
+            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=imghead2 class=imghead2>';
+            var img = document.getElementById('imghead2');
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+            div.innerHTML = "<div id=divhead class=imghead2 style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+          }
+        }
+         function previewImage3(file)
+        {
+          var MAXWIDTH  = 150; 
+          var MAXHEIGHT = 150;
+          var div = $("#out_leftImg");
+          if (file.files)
+          {
+              div.append('<img id=imghead3 class=imghead3>');
+              var img = document.getElementById('imghead3');
+              img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width  =  rect.width;
+                img.height =  rect.height;
+              
+              }
+              var reader = new FileReader();
+              reader.onload = function(evt){
+          		img.src = evt.target.result;
+              }
+              	reader.readAsDataURL(file.files[0]);
+          }
+          else //兼容IE
+          {
+          	var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=imghead3 class=imghead3>';
+            var img = document.getElementById('imghead3');
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+          }
+        }
+        function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+            var param = {top:0, left:0, width:width, height:height};
+            if( width>maxWidth || height>maxHeight ){
+                rateWidth = width / maxWidth;
+                rateHeight = height / maxHeight;
+                
+                if( rateWidth > rateHeight ){
+                    param.width =  maxWidth;
+                    param.height = Math.round(height / rateWidth);
+                }else{
+                    param.width = Math.round(width / rateHeight);
+                    param.height = maxHeight;
+                }
+            }
+            param.left = Math.round((maxWidth - param.width) / 2);
+            param.top = Math.round((maxHeight - param.height) / 2);
+            return param;
+        }
+</script>

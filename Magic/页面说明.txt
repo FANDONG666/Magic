@@ -1,0 +1,25 @@
+index.html                                             首页
+
+contribute.html					       稿件投稿
+
+login.html					       登录
+
+modifyAccount.html				       修改支付宝
+
+newsCenter.html					       新闻中心
+
+personalInformation.html                               个人信息
+
+registerFour.html                                      注册成功
+
+registerOne.html                                       设置笔名
+
+registerThree.html                                     设置收款方式
+
+registerTwo.html                                       填写个人信息
+
+resetPassword.html                                     重置密码
+
+revisionSuccess.html				       密码修改成功
+
+settlement.html                                        稿件结算

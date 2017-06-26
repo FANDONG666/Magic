@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>填写个人信息</title>
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/registerTwo.css">
+</head>
+<style>
+	.warningBox img{
+		display: none;
+	}
+	.warningBox span{
+		color: #FD2222;
+		display: none;
+	}
+</style>
+<body>
+	<header><img src="../img/logo.png" alt=""></header>
+	<ul class="topNav cf">
+		<li class="fl li1 lis">
+			<img src="../img/round1.png" alt="">
+			<a href="#">设置笔名</a>
+		</li>
+		<li class="fl li2 lis">
+			<img src="../img/round22.png" alt="">
+			<a href="#">填写个人信息</a>
+		</li>
+		<li class="fl li3">
+			<img src="../img/round3.png" alt="">
+			<a href="#">设置收款方式</a>
+		</li>
+		<li class="fl li4">
+			<img src="../img/round4.png" alt="">
+			<a href="#">注册成功</a>
+		</li>
+	</ul>
+	<form action="" method="post">
+		<p class="p1">
+			<span class="showBox">
+				<span>登录密码</span>
+				<input type="password">
+			</span>
+			<span class="warningBox">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="yzSpan">登录密码为6-20位</span>
+			</span>
+		</p>
+		<p class="p2">
+			<span class="showBox">
+				<span>确认密码</span>
+				<input type="password">
+			</span>
+			<span class="warningBox">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="yzSpan">两次输入不相符</span>
+			</span>
+		</p>
+		<p class="p3">
+			<span class="showBox">
+				<span class="aqm">安全码</span>
+				<input type="text">
+			</span>
+			<span class="warningBox">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="tsSpan">6位数字，稿费结算申请提现时使用，重要！</span>
+			</span>
+		</p>
+		<p class="p4">
+			<span class="showBox">
+				<span class="lxqq">联系QQ</span>
+				<input type="text">
+			</span>
+			<span class="warningBox">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="tsSpan"></span>
+			</span>
+		</p>
+		<p class="p5">
+			<span class="showBox">
+				<span>擅长品类</span>
+				<input type="text">
+			</span>
+			<span class="warningBox">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="tsSpan">例：女装，家居，母婴，美妆，男装，数码</span>
+			</span>
+		</p>
+		<p class="p6">
+			<span class="showBox">
+				<span class="yqm">邀请码</span>
+				<input type="text">
+			</span>
+			<span class="warningBox">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="tsSpan">6-12位英文+数字</span>
+			</span>
+		</p>
+		<p class="p7">
+			<a class="next" href="JavaScript:;">上一步</a>
+			<a class="next" href="JavaScript:;">下一步</a>
+		</p>
+	</form>
+	<footer style="position: absolute;bottom:-200px;"></footer>
+
+
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<!--修改滚动条-->
+	<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="../js/scrollBar.js"></script>
+</body>
+</html>
+<script>
+	var psd;
+	$(".p1 input").blur(function () {
+            psd = $(".p1 input").val();
+             var mim = /^[A-Za-z0-9._-]{6,20}$/;
+             if (mim.test(psd)) {
+             $(".p1 .warningBox img").show();
+             $(".p1 .warningBox img").css({"display":"inline-block"})           
+              }
+              else {
+                  $(".p1 .warningBox span").show();              
+               }
+           })
+	$(".p1 input").focus(function () {
+          $(".p1 .warningBox img").hide();
+          $(".p1 .warningBox span").hide();          
+           })
+	var confirm;
+	$(".p2 input").blur(function () {
+            confirm = $(".p2 input").val();
+             var mim = /^[A-Za-z0-9._-]{6,20}$/;
+             if (confirm==psd) {
+             $(".p2 .warningBox img").show();
+             $(".p2 .warningBox img").css({"display":"inline-block"})           
+              }
+              else {
+                  $(".p2 .warningBox span").show();              
+               }
+           })
+	$(".p2 input").focus(function () {
+          $(".p2 .warningBox img").hide();
+          $(".p2 .warningBox span").hide();          
+           })
+</script>

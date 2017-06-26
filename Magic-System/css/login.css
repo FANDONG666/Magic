@@ -1,0 +1,86 @@
+body{
+	overflow:hidden;
+}
+.content{
+	width:1440px;
+	height: 805px;
+	margin: 0 auto;
+	padding-top: 95px;
+	background-image: url(../img/loginBg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.top{
+	width:198px;
+	height: 145px;
+	margin: 0 auto;
+	text-align: center;
+}
+.top img{
+	display: inline-block;
+}
+.top .welcome{
+	font-size: 42px;
+	color: #ff000c;
+	margin-top: 24px;
+}
+.top .loginAccount{
+	font-size: 15px;
+	color: #ccc;
+	margin-top: 20px;
+}
+form{
+	width:392px;
+	margin: 108px auto 0px;
+	font-size: 15px;
+	color:#ccc;
+	font-family: "微软雅黑";
+}
+form input{
+	display: block;
+	margin-top: 22px;
+	font-family: "微软雅黑";
+	font-size: 15px;
+	color:#ccc;
+	background: transparent;
+	border:1px solid #d2d5d8;
+}
+form input[type="text"]{
+	width:390px;
+	height:46px;
+	line-height: 46px;
+	text-indent: 22px;	
+}
+form input[type=submit]{
+	width:392px;
+	height:46px;
+	color:#ff000c;
+	background: #fff;
+}
+
+/*form input[type="checkbox"]{
+	width:15px;
+	height: 15px;
+	border: 0px;
+	-webkit-appearance:none;
+	background: transparent;
+	border:1px solid #d2d5d8;
+}*/
+.cbox{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	margin-top: 22px;
+	border:1px solid #d2d5d8;
+	background: transparent;
+}
+.cbox.checked:after{
+	content:"√";
+	color:#fff;
+	margin-left: 2px;
+}
+form .remember{
+	position: relative;
+	top:-3px;
+	left:5px;
+}

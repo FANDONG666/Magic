@@ -1,0 +1,58 @@
+
+form{
+	width:730px;
+	margin: 35px auto 0px;
+}
+form p{
+	margin-top: 30px;
+}
+input{
+	width:240px;
+	height: 33px;
+	border:1px solid #aaa;
+	margin-left: 26px;
+	text-indent: 20px;
+}
+.over{
+	display: inline-block;
+	position: relative;
+	left:22px;
+	top:5px;
+}
+.aqm{
+	margin-left: 1em;
+}
+.lxqq{
+	margin-left: 0.5em;
+}
+.yqm{
+	margin-left: 1em;
+}
+.p7{
+	margin-left:10px;
+}
+.next{
+	display: inline-block;
+	width:140px;
+	height: 38px;
+	margin: 70px 0px 0px 20px;
+	font-size: 14px;
+	color:#fff;
+	line-height: 38px;
+	text-align: center;
+	background: #ff6549;
+	border-radius: 5px;
+}
+.next:active{
+	background: #ccc;
+}
+.yzSpan{
+	color:#ff6549;
+	font-size: 12px;
+	margin-left: 37px;
+}
+.tsSpan{
+	color:#9a9a9a;
+	font-size: 12px;
+	margin-left: 37px;
+}

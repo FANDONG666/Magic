@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<title>管理员管理</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap3-wysihtml5.min.css">
+		<link rel="stylesheet" href="../css/comment.css" />
+		<link rel="stylesheet" href="../css/manager.css" />
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div style="background: #000;height: 50px;width: 100%;line-height: 50px;">
+				<div style="float: right;margin-right: 100px;">
+					<a href="JavaScript:void(0);" style="margin-right: 15px;">您好</a>
+					<a href="JavaScript:void(0);" id="logout">退出</a>
+				</div>
+			</div>
+			<div class="topLeft">
+				<p class="log"><img src="../img/log.png" /></p>
+				<ul>
+					<li>
+						<a href="write.html"><img src="../img/write.png" /><span>写手管理</span></a>
+					</li>
+					<li class="aaaa">
+						<a href="conventional.html"><img src="../img/system.png" />
+							<span>系统设置</span>							
+						</a>
+						<i>></i>
+					</li>
+					<div>
+						<li class="cread">
+							<a href="manager.html">
+								<span>管理员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="chann.html">
+								<span>渠道管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="new_media.html">
+								<span>媒体管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="password.html">
+								<span>邀请码管理</span>
+							</a>
+						</li>
+					</div>
+					<li>
+						<a href="contribution.html"><img src="../img/manage.png" /><span>稿件管理</span></a>
+					</li>
+					<li>
+						<a href="JavaScript:;"><img src="../img/new.png" /><span>消息中心</span></a>
+					</li>
+					<li>
+						<a href="balance.html"><img src="../img/balance.png" /><span>结算中心</span></a>
+					</li>
+				</ul>
+			</div>
+			<!--遮罩层不用写数据-->
+			<div class="overall_pro"></div>
+			<p class="topP"></p>
+			<div class="content-wrapper" style="padding: 0;margin-left: 224px;margin-right: 20px;" id="topR">
+				<div class="row" style="margin: 0;">
+					<div class="col-lg-12 posD">
+						<img src="../img/pst.png" />
+						<a href="index_index.html">首页</a>
+						<span>></span>
+						<a href="conventional.html">系统设置</a>
+						<span>></span>
+						<a href="manager.html">管理员管理</a>
+					</div>
+					<div class="medi col-lg-5">
+						<img src="../img/task.png" />
+						<span>新建管理员</span>
+					</div>
+					<div class="level col-lg-5">
+						<img src="../img/lavel.png" />
+						<span>新建级别</span>
+					</div>
+					<div class="col-lg-12 screen">
+						<p>渠道列表</p>
+					</div>
+
+					<div class="col-lg-12 btm_page">
+						<!--弹出框-->
+						<div class="popup">
+							<div class="pop_top">
+								<span>新建管理员</span>
+								<em>X</em>
+							</div>
+							<form action="" method="post">
+								<div><span>姓名:</span><input type="text" placeholder="徐志清" / class="tex"></div>
+								<div><span>账号:</span><input type="text" placeholder="555555" class="tex" /></div>
+								<div><span>密码:</span><input type="password" placeholder="555555" class="tex" /></div>
+								<div><span>手机号码:</span><input type="text" placeholder="13673346596" class="tex" /></div>
+								<div>
+									<span>所属媒体:</span>
+									<select>
+										<option>11111111</option>
+										<option>11111111</option>
+										<option>11111111</option>
+										<option>11111111</option>
+									</select>
+								</div>
+								<div>
+									<span>账号等级:</span>
+									<select>
+										<option>1111</option>
+										<option>1111</option>
+										<option>1111</option>
+										<option>1111</option>
+									</select>
+								</div>
+								<input type="submit" class="smt" value="确定" />
+							</form>
+						</div>
+						
+						
+						
+						<div class="popup1">
+							<div class="pop_top">
+								<span>新建级别</span>
+								<em>X</em>
+							</div>
+							<form action="" method="post">
+								<div><span>级别姓名:</span><input type="text" placeholder="媒体管理员" / class="tex"></div>
+								<div><span>级别:</span><input type="text" placeholder="3" class="tex" /></div>								
+								<div>
+									<span>权限管理:</span>							
+									  	<p><input type="checkbox" name="category" value="修改密码" />修改密码 </p>   
+									    <p><input type="checkbox" name="category" value="添加媒体" />添加媒体</p>
+									    <p><input type="checkbox" name="category" value="冻结写手" />冻结写手</p>    
+									    <p><input type="checkbox" name="category" value="发起媒体任务" />汽车</p>    
+									    <p><input type="checkbox" name="category" value="新建媒体管理员" />科技</p>    									    
+								</div>								
+								<input type="submit" class="smt" value="提交" />
+							</form>
+						</div>
+						<div class="classify">
+							<span class="col-lg-1">编号</span>
+							<span class="col-lg-1">姓名</span>
+							<span class="col-lg-2">账号</span>
+							<span class="col-lg-1">密码</span>
+							<span class="col-lg-1">级别</span>
+							<span class="col-lg-2">所属媒体</span>
+							<span class="col-lg-2">状态</span>
+							<span class="col-lg-2">编辑</span>
+						</div>
+
+						<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1">程德明</li>
+							<li class="col-lg-2">78787878</li>
+							<li class="col-lg-1">55556666</li>
+							<li class="col-lg-1">管理员 </li>
+							<li class="col-lg-2">北欧家具</li>
+							<li class="col-lg-2"><strong>启用</strong></li>
+							<li class="col-lg-2"><i class="col-lg-5">删除</i><strong class="col-lg-5 col-lg-offset-2">修改</strong></li>
+						</ul>
+						<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1">程德明</li>
+							<li class="col-lg-2">78787878</li>
+							<li class="col-lg-1">55556666</li>
+							<li class="col-lg-1">管理员 </li>
+							<li class="col-lg-2">北欧家具</li>
+							<li class="col-lg-2"><strong>启用</strong></li>
+							<li class="col-lg-2"><i class="col-lg-5">删除</i><strong class="col-lg-5 col-lg-offset-2">修改</strong></li>
+						</ul>
+						<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1">程德明</li>
+							<li class="col-lg-2">78787878</li>
+							<li class="col-lg-1">55556666</li>
+							<li class="col-lg-1">管理员 </li>
+							<li class="col-lg-2">北欧家具</li>
+							<li class="col-lg-2"><strong>启用</strong></li>
+							<li class="col-lg-2"><i class="col-lg-5">删除</i><strong class="col-lg-5 col-lg-offset-2">修改</strong></li>
+						</ul>
+						
+						<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1">程德明</li>
+							<li class="col-lg-2">78787878</li>
+							<li class="col-lg-1">55556666</li>
+							<li class="col-lg-1">管理员 </li>
+							<li class="col-lg-2">北欧家具</li>
+							<li class="col-lg-2"><strong>启用</strong></li>
+							<li class="col-lg-2"><i class="col-lg-5">删除</i><strong class="col-lg-5 col-lg-offset-2">修改</strong></li>
+						</ul>
+						<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1">程德明</li>
+							<li class="col-lg-2">78787878</li>
+							<li class="col-lg-1">55556666</li>
+							<li class="col-lg-1">管理员 </li>
+							<li class="col-lg-2">北欧家具</li>
+							<li class="col-lg-2"><strong>启用</strong></li>
+							<li class="col-lg-2"><i class="col-lg-5">删除</i><strong class="col-lg-5 col-lg-offset-2">修改</strong></li>
+						</ul>
+						<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1">程德明</li>
+							<li class="col-lg-2">78787878</li>
+							<li class="col-lg-1">55556666</li>
+							<li class="col-lg-1">管理员 </li>
+							<li class="col-lg-2">北欧家具</li>
+							<li class="col-lg-2"><strong>启用</strong></li>
+							<li class="col-lg-2"><i class="col-lg-5">删除</i><strong class="col-lg-5 col-lg-offset-2">修改</strong></li>
+						</ul>
+						<div class="col-lg-12 btm_p">
+							<p><span><<</span><em>1</em><em>2</em><em>3</em><em>4</em><em>5</em><span class="pre_r">>></span></p>
+						</div>
+					</div>
+
+					<!--<div class="col-lg-6 col-lg-offset-3" style="background-color: #dedef8;box-shadow: 
+	        inset 1px -1px 1px #444, inset -1px 1px 1px #444;">-->
+
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+
+</html>
+
+<script>
+	var img_H = $(".btm_page ul li img").height();;
+	var img_Pt = (60 - img_H) / 2 - 5;
+	img_H = $(".btm_page ul li img").css("marginTop", img_Pt)
+	$(window).resize(function() {
+		img_H = $(".btm_page ul li img").height();
+		img_Pt = (60 - img_H) / 2 - 5
+		img_H = $(".btm_page ul li img").css("marginTop", img_Pt)
+	});
+	$(".medi").click(function() {
+		$(".overall_pro").show();
+		$(".popup").show();
+
+	})
+	$(".pop_top em").click(function() {
+		$(".overall_pro").hide();
+		$(".popup").hide();
+
+	})
+	
+	$(".level").click(function() {
+		$(".overall_pro").show();
+		$(".popup1").show();
+
+	})
+	$(".pop_top em").click(function() {
+		$(".overall_pro").hide();
+		$(".popup1").hide();
+
+	})
+	var  c= true;
+			$(".topLeft .aaaa i").on("click",function(){
+				var el =$(".topLeft ul div"),
+				 curHeight = el.height(),
+    			autoHeight = el.css('height', 'auto').height();
+				if(c==true){
+					el.stop(true).animate({height:"0px"})
+					c=false
+				}else{
+					el.height(curHeight).stop(true).animate({height: autoHeight}, 500);
+					c=true
+				}
+			})
+</script>

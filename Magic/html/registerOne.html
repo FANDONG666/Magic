@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>设置笔名</title>
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/registerOne.css">
+</head>
+<body>
+	<header><img src="../img/logo.png" alt=""></header>
+	<ul class="topNav cf">
+		<li class="fl li1 lis">
+			<img src="../img/round1.png" alt="">
+			<a href="#">设置笔名</a>
+		</li>
+		<li class="fl li2">
+			<img src="../img/round2.png" alt="">
+			<a href="#">填写个人信息</a>
+		</li>
+		<li class="fl li3">
+			<img src="../img/round3.png" alt="">
+			<a href="#">设置收款方式</a>
+		</li>
+		<li class="fl li4">
+			<img src="../img/round4.png" alt="">
+			<a href="#">注册成功</a>
+		</li>
+	</ul>
+	<form action="" method="post">
+		<div class="outer cf">
+			<div class="showBox fl">
+				<span class="iptName">笔名</span>
+				<input type="text">
+			</div>
+			<div class="warningBox fl">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="hideSpan2">当前笔名已注册</span>
+			</div>
+			
+		</div>
+		<div class="outer cf">
+			<div class="showBox fl">
+				<span class="iptName" style="margin-left:-1em;">手机号</span>
+				<input type="text">
+				<input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" /> 
+			</div>
+			<div class="warningBox fl">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="hideSpan2">当前手机号已注册</span>
+			</div>
+			
+		</div>
+		<div class="outer cf">
+			<div class="showBox fl">
+				<span class="iptName">验证</span>
+				<input type="text">
+			</div>
+			<div class="warningBox fl">
+				<img class="over" src="../img/over.png" alt="">
+				<span class="hideSpan2">验证码输入错误</span>
+			</div>
+			
+		</div>
+		<a class="next" href="JavaScript:;">下一步</a>
+	</form>
+	<footer></footer>
+
+	
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<!--修改滚动条-->
+	<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="../js/scrollBar.js"></script>
+	<script type="text/javascript">
+		//倒计时
+		var countdown=60; 
+		function settime() {
+			if (countdown ==0) { 
+				$('#btn').removeAttr("disabled"); 
+				$('#btn').val("免费获取验证码"); 
+				countdown=60;
+			} else { 
+				$('#btn').attr("disabled", true); 
+				$('#btn').val("验证已发送" + countdown + "s");
+				countdown--; 
+				setTimeout(function() { 
+				settime();
+				
+				},1000)
+			} 
+				
+		}
+		
+		$("#btn").on('click',function(){
+			settime();
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+.content{background: #FFFFFF;margin-bottom: 35px;padding-top: 20px;}
+.cont_left p{line-height: 40px;font-size: 15px;color: #333333;text-indent: 2rem;}
+.cont_left{height: 645px;border: 1px solid #e3e3e3;overflow-y: scroll;}
+.cont_left::-webkit-scrollbar  
+{  
+    width: 2px;       
+    background-color: #ccc;  
+} 
+.title{height: 80px;} 
+.cont_rig span{display: inline-block;height: 80px;line-height: 80px;text-align: right;padding: 0;color: #333;}
+.title em{height: 42px;border: 1px solid #CCCCCC;margin-top: 19px;line-height: 42px;v}
+.img_cicle img{padding: 0;}
+.canal em{height: 42px;border: 1px solid #CCCCCC;margin-top: 19px;line-height: 42px;color: #333;}
+.excuse em{height: 118px;color: #333;display: inline-block;font-size: 14px;text-indent: 1em;border: 1px solid #CCCCCC;padding: 0;}
+.thr a{height: 30px;background: #07ac55;font-size: 14px;line-height: 30px;text-align: center;}
+.thr a{margin: 15px 0;margin-left: 10px;cursor: pointer;text-decoration: none;}
+.thr .no_pass{background: #ac071b;}
+.operate ul{height: 100px;overflow-y: scroll;border: 1px solid #CCCCCC;}
+.operate ul::-webkit-scrollbar  
+{  
+    width: 3px;       
+    background-color: #ccc;  
+} 
+.operate ul li{height: 33px;line-height: 33px;}
+.return a{height: 30px;background: #ffc600;font-size: 14px;line-height: 30px;text-align: center;}
+.return a{margin: 15px 0;margin-left: 10px;cursor: pointer;text-decoration: none;}
+.operate li em{text-align: left;}
+.operate li i{text-align: right;}
+.xsd_tu input{height: 42px;border: 1px solid #CCCCCC;margin-top: 19px;line-height: 42px;color: #333;font-size: 14px;}
+.xsd_tu textarea{height: 120px;font-size: 14px;}
+.xsd_tu .cho_b{height: 42px;color: #333;display: inline-block;font-size: 14px;text-indent: 1em;padding: 0;border: 0;color: #FD0000;}
+#ckBox input{height: 20px;margin-top: 5px;}
+#ckBox{height: auto;margin-left: 30px;margin-bottom: 20px;}
+
+.cont_left{font-size: 16px;color: #000000;}
+ .inputFileWrapper label{
+            display: block;
+            float: left;
+            position: relative;
+          
+        }
+        .inputFileWrapper .col-lg-12{padding: 0;}
+        .inputFileWrapper input[type="file"]{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            clip:rect(0,0,0,0);
+        }
+        .inputFileWrapper .custorm-style{
+            display: block;
+          
+            height: auto;
+        }
+        .inputFileWrapper .custorm-style .left-button{         
+            display: block;
+            text-align: center;
+            float: left;
+        }
+        #rightText{height: auto;}
+        #rightText img{height: 100%;width: 100%;}
+        .inputFileWrapper .custorm-style .right-text{
+            height: auto;    
+            display: block;
+            float: right;
+            padding: 4px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+      
+       
+        background-size: cover;
+        }
+       
+
+body .popup{position: fixed;top: 50%;left:50%;margin-top:-160px;width: 570px;
+min-height:315px; height:auto!important; height:315px;
+margin-left: -235px;background: #fff;z-index: 99;display: none ;}
+.popup .pop_top{height: 59px;border-bottom: 1px solid #CCCCCC;position: relative;}
+.popup .pop_top span{display: inline-block;height: 59px;line-height: 59px;font-size: 14px;color: #333;text-indent: 1em;}
+.popup .pop_top em{position: absolute;top: 13px;right: 15px;font-size: 18px;color: #000;cursor: pointer;}
+.popup form{margin: 40px 15px 0 15px;display: block;padding-bottom: 30px;}
+.popup form textarea{width: 100%;
+padding: 20px 0;
+height: 30px;
+font-size: 18px;color: #333;margin-bottom: 15px;line-height: 30px;}
+.popup form .smt{width: 140px;height: 42px;background: #07ac55;font-size: 16px;text-align: center;line-height: 28px;color: #FFFFFF;margin-left: 140px;margin-top: 15px;border-radius: 3px;}
+.overall_pro{position: absolute;height: 1000px;width: 100%;background: rgba(0,0,0,0.3);z-index: 99;display: none;}
+body .anni{height: 30px;text-align: center;line-height: 30px;background: #FFC600;color: #FFFFFF;font-size: 14px;cursor: pointer;}    
+
+
+.ptin{text-align: left;padding: 0;border: 0;}
+#ckBox span{height: 30px;line-height: 30px;text-align: center;}

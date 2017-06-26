@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<title>结算中心</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap3-wysihtml5.min.css">
+		<link rel="stylesheet" href="../css/comment.css" />
+		<link rel="stylesheet" href="../css/index_index.css" />
+		<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div style="background: #000;height: 50px;width: 100%;line-height: 50px;">
+				<div style="float: right;margin-right: 100px;">
+					<a href="JavaScript:void(0);" style="margin-right: 15px;">您好</a>
+					<a href="JavaScript:void(0);" id="logout">退出</a>
+				</div>
+			</div>
+			<div class="topLeft">
+				<p class="log"><img src="../img/log.png" /></p>
+				<ul>
+					<li>
+						<a href="write.html"><img src="../img/write.png" /><span>写手管理</span></a>
+					</li>
+					<li class="aaaa">
+						<a href="conventional.html"><img src="../img/system.png" />
+							<span>系统设置</span>							
+						</a>
+						<i>></i>
+					</li>
+					<div>
+						<li>
+							<a href="manager.html">
+								<span>管理员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="chann.html">
+								<span>渠道管理</span>
+							</a>text
+						</li>
+						<li>
+							<a href="new_media.html">
+								<span>媒体管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="password.html">
+								<span>邀请码管理</span>
+							</a>
+						</li>
+					</div>
+					<li>
+						<a href="contribution.html"><img src="../img/manage.png" /><span>稿件管理</span></a>
+					</li>
+					<li>
+						<a href="JavaScript:;"><img src="../img/new.png" /><span>消息中心</span></a>
+					</li>
+					<li>
+						<a href="balance.html"><img src="../img/balance.png" /><span>结算中心</span></a>
+					</li>
+				</ul>
+			</div>
+			<!--遮罩层不用写数据-->
+			<div class="overall_pro"></div>
+			<p class="topP"></p>
+			<div class="content-wrapper" style="padding: 0;margin-left: 224px;margin-right: 20px;" id="topR">
+				<div class="row" style="margin: 0;">
+					<div class="col-lg-12 posD">
+						<img src="../img/pst.png" />
+						<a href="index_index.html">首页</a>
+					</div>
+					<div class="col-lg-12 screen">
+						<span>2017</span>年<span>4</span>月<span>15</span>日
+
+					</div>
+					<div class="col-lg-12 navs1">
+						<ul class="col-lg-12">
+							<li class="col-lg-3">
+								<div class="col-lg-5 div_blu"><img src="../img/pencil.png" /></div>
+								<div class="col-lg-6 div_wra">
+									<span>150</span>
+									<em>累计写手</em>
+
+								</div>
+							</li>
+							<li class="col-lg-3">
+								<div class="col-lg-5 div_blu"><img src="../img/draft.png" /></div>
+								<div class="col-lg-6 div_wra">
+									<span>150</span>
+									<em>收到稿件</em>
+
+								</div>
+							</li>
+							<li class="col-lg-3">
+								<div class="col-lg-5 div_blu"><img src="../img/dui_h.png" /></div>
+								<div class="col-lg-6 div_wra">
+									<span>150</span>
+									<em>审核通过</em>
+
+								</div>
+							</li>
+							<li class="col-lg-3">
+								<div class="col-lg-5 div_blu"><img src="../img/dui_hx.png" /></div>
+								<div class="col-lg-6 div_wra">
+									<span>150</span>
+									<em>平台审核通过</em>
+
+								</div>
+							</li>
+						</ul>
+
+					</div>
+					<form action="" method="post" class="col-lg-12 choice">
+
+						<p class="col-lg-1"><input type="checkbox" name="category" value="" /><span>访问量</span></p>
+						<p class="col-lg-1"><input type="checkbox" name="category" value="" /><span>引导成交</span></p>
+						<p class="col-lg-1"><input type="checkbox" name="category" value="" /><span>平台通过数</span></p>
+						<p class="col-lg-1"><input type="checkbox" name="category" value="" /><span>发放稿数</span></p>
+						<p class="col-lg-1"><input type="checkbox" name="category" value="" /><span>粉丝数</span></p>
+						<p class="col-lg-1"><input type="checkbox" name="category" value="" /><span>达人指数</span></p>
+						<p class="col-lg-1"><input type="checkbox" name="category" value="" /><span>写稿数</span></p>
+						<div class="col-lg-12 time">
+							<em class="col-lg-1">选择时间</em>
+							<input type="text" class="col-lg-1 tex3" />
+							<span class="col-lg-1">至</span>
+							<input type="text" class="col-lg-1 tex3" />
+							<button class="search-btn">搜索</button>
+						</div>
+					</form>
+					<div class="statistics cf col-lg-12">
+						<div class="statistic statistic1 fl col-lg-12" id="leftStatistic"></div>
+
+					</div>
+
+					<div class="col-lg-12 btm_page">
+						<!--弹出框-->
+						<div class="popup">
+							<div class="pop_top">
+								<span>填写拒绝理由</span>
+								<em>X</em>
+							</div>
+							<form action="" method="post">
+								<textarea class="tex" /></textarea>
+								<input type="submit" class="smt" value="确定" />
+							</form>
+						</div>
+						<p class="top_p"><span class="cread">昨天</span><span>最近7天</span></p>
+						<div class="box box1">
+							<div class="classify">
+								<span class="col-lg-2">序号</span>
+								<span class="col-lg-2">媒体访问排行榜</span>
+								<span class="col-lg-2">媒体阅读排行榜</span>
+								<span class="col-lg-2">媒体指数排行</span>
+								<span class="col-lg-2">媒体成交排行</span>
+								<span class="col-lg-2">媒体粉丝排行</span>
+							</div>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">1</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">1</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">1</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">1</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">1</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">1</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+						</div>
+						<div class="box">
+							<div class="classify">
+								<span class="col-lg-2">序号</span>
+								<span class="col-lg-2">媒体访问排行榜</span>
+								<span class="col-lg-2">媒体阅读排行榜</span>
+								<span class="col-lg-2">媒体指数排行</span>
+								<span class="col-lg-2">媒体成交排行</span>
+								<span class="col-lg-2">媒体粉丝排行</span>
+							</div>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">2</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">2</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">2</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">2</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">2</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+							<ul class="col-lg-12">
+								<li class="col-lg-2">2</li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+								<li class="col-lg-2"><span class="col-lg-5">东欧家具</span><em class="col-lg-5  col-lg-offset-2">3000</em></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" src="../js/echarts.min.js"></script>
+<script type="text/javascript" src="../js/statisticalChart.js"></script>
+<script>
+	var img_H = $(".btm_page ul li img").height();;
+	var img_Pt = (60 - img_H) / 2 - 5;
+	img_H = $(".btm_page ul li img").css("marginTop", img_Pt)
+	$(window).resize(function() {
+		img_H = $(".btm_page ul li img").height();
+		img_Pt = (60 - img_H) / 2 - 5
+		img_H = $(".btm_page ul li img").css("marginTop", img_Pt)
+	});
+	$(".btm_page ul li em").click(function() {
+		$(".overall_pro").show();
+		$(".popup").show();
+
+	})
+	$(".pop_top em").click(function() {
+		$(".overall_pro").hide();
+		$(".popup").hide();
+
+	})
+var  c= true;
+			$(".topLeft .aaaa i").on("click",function(){
+				var el =$(".topLeft ul div"),
+				 curHeight = el.height(),
+    			autoHeight = el.css('height', 'auto').height();
+				if(c==true){
+					el.stop(true).animate({height:"0px"})
+					c=false
+				}else{
+					el.height(curHeight).stop(true).animate({height: autoHeight}, 500);
+					c=true
+				}
+			})
+	$(".navs li").on("click", function() {
+		if($(this).hasClass('cread')) {
+
+			$(this).removeClass("cread")
+		} else {
+			$(this).addClass("cread")
+		}
+	})
+	
+	$('.top_p span').click(function(){
+		var index = $('.top_p span').index(this);
+		$(this).addClass('cread').siblings().removeClass('cread');
+		$('.box').eq(index).show().siblings('.box').hide();
+	})
+	var aa = {
+		name: '访问量',
+		type: 'line',
+		smooth: true,
+		showSymbol: false,
+		symbol: 'circle',
+		symbolSize: 6,
+		data: ['1200', '1400', '1008', '1411', '1026', '1288', '1300'],
+		areaStyle: {
+			normal: {
+				color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+					offset: 0,
+					color: 'rgba(248, 248, 248,0.5)'
+				}, {
+					offset: 1,
+					color: 'rgba(199, 237, 250,0.2)'
+				}], false)
+			}
+		},
+		itemStyle: {
+			normal: {
+				color: '#ebebeb'
+			}
+		},
+		lineStyle: {
+			normal: {
+				width: 3
+			}
+		}
+	}
+</script>

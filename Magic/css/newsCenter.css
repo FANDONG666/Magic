@@ -1,0 +1,132 @@
+.centent{
+	width:1205px;
+	height: 754px;
+	padding: 18px 27px 18px 8px;
+	background: #eee;
+	float: left;
+}
+.left{
+	width:756px;
+	height: 757px;
+	color:#626262;
+	padding-left: 18px;
+	border-radius: 3px;
+	background: #fff;
+}
+.page1 ul{
+	overflow: hidden;
+	margin-top: 25px;
+	font-size: 14px;
+	width:780px;
+}
+.page1 p{
+	margin-top: 16px;
+	font-size: 16px;
+}
+.page1 ul li:nth-child(1){
+	margin-left:0px;
+}
+.page1 ul li{
+	float: left;
+	width: 100px;
+	height: 60px;
+	margin-right: 50px;
+	cursor: pointer;
+}
+.page1 ul li img{
+	display: inline-block;
+}
+.page1 ul li span{
+	position: relative;
+	left:12px;
+	top:-6px;
+}
+.page2{
+	width:545px;
+	height: 477px;
+	padding:16px 92px 40px 108px;
+	margin: 0px 0px 25px -7px;
+	border: 2px solid #e0e0e0;
+	overflow-y: scroll;
+	font-size: 16px;
+	color:#5a5a5a;
+}
+.page2 img{
+	width:545px;
+	height: 235px;
+	margin-top: 18px;
+	margin-bottom: 24px;
+}
+.page2 .text{
+	font-size: 14px;
+	margin-top: 31px;
+}
+.p2 .span2{
+	margin-left: 127px;
+}
+.p2 .span3{
+	margin-right: 10px;
+}
+.p3{
+	color:#fc664f;
+	margin-top: 38px;
+}
+.right{
+	width:410px;
+	font-size: 12px;
+}
+.part1{
+	height: 382px;
+	background: #fff;
+	border-radius: 3px;
+	padding: 11px 15px 37px 28px;
+	
+}
+.part2{
+	height: 262px;
+	background: #fff;
+	border-radius: 3px;
+	margin-top: 17px; 
+	padding: 11px 15px 37px 28px;
+}
+.ul3{
+	margin-top: 34px;
+	overflow-y: scroll;
+	padding-right:15px;
+}
+.ul3{
+	height: 320px;
+}
+.ul3 li {
+	overflow: hidden;
+	margin-top: 24px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.ul3 li:nth-child(1){
+	margin-top: 0px;
+}
+.ul3 li:last-child{
+	border: 0;
+}
+.ul3 li span:nth-child(2){
+	float: right;
+}
+.right .title{
+	font-size: 20px;
+	color:#fc664f;
+	position: relative;
+	top:-8px;
+	left:16px;
+}
+.right .tImg{
+	display: inline-block;
+	margin-left: -18px;
+}
+.addspanss{
+	color: red;
+}
+.myscroll {height: 230px;line-height: 26px;overflow: hidden;margin-top: 10px;padding-right: 15px;}
+.myscroll li { height: 40px;}
+.myscroll li span:nth-child(2){float: right;}
+.myscroll a:hover { color: #ED5565; text-decoration: underline;}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<title>稿件审核</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap3-wysihtml5.min.css">
+		<link rel="stylesheet" href="../css/comment.css" />
+		<link rel="stylesheet" href="../css/manuscript.css" />
+		<link rel="stylesheet" href="../css/wangEditor.min.css">
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script src="../js/wangEditor.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/comment.js"></script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			
+			<div style="background: #000;height: 50px;width: 100%;line-height: 50px;">
+				<div style="float: right;margin-right: 100px;">
+					<a href="JavaScript:void(0);" style="margin-right: 15px;">您好</a>
+					<a href="JavaScript:void(0);" id="logout">退出</a>
+				</div>
+			</div>
+			<div class="topLeft">
+				<p class="log"><img src="../img/log.png" /></p>
+				<ul>
+					<li>
+						<a href="write.html"><img src="../img/write.png" /><span>写手管理</span></a>
+					</li>
+					<li class="aaaa">
+						<a href="conventional.html"><img src="../img/system.png" />
+							<span>系统设置</span>							
+						</a>
+						<i>></i>
+					</li>
+					<div>
+						<li>
+							<a href="manager.html">
+								<span>管理员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="chann.html">
+								<span>渠道管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="new_media.html">
+								<span>媒体管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="password.html">
+								<span>邀请码管理</span>
+							</a>
+						</li>
+					</div>
+					<li class="cread>
+						<a href="contribution.html"><img src="../img/manage.png" /><span>稿件管理</span></a>
+					</li>
+					<li>
+						<a href="JavaScript:;"><img src="../img/new.png" /><span>消息中心</span></a>
+					</li>
+					<li>
+						<a href="balance.html"><img src="../img/balance.png" /><span>结算中心</span></a>
+					</li>
+				</ul>
+			</div>
+				<!--遮罩层不用写数据-->
+			<div class="overall_pro" style="height: 1150px;"></div>
+			<p class="topP"></p>
+			<div class="content-wrapper" style="padding: 0;margin-left: 224px;margin-right: 20px;" id="topR">
+				<div class="row" style="margin: 0;">
+					<div class="col-lg-12 posD">
+						<img src="../img/pst.png" />
+						<a href="index_index.html">首页</a>
+						<span>></span>
+						<a href="contribution.html">稿件管理</a>
+						<span>></span>
+						<a href="manuscript.html">稿件审核</a>
+					</div>
+					<div class="col-lg-12 screen">
+						<p>稿件审核</p>
+					</div>
+					<div class="content col-lg-12 btm_page">
+						
+						<!--弹出框-->
+						<div class="popup" style="position: fixed;top: 50%;margin-top:-160px;width: 570px;">
+							<div class="pop_top">
+								<span>稿件审核</span>
+								<em>X</em>
+							</div>
+							<form action="" method="post">
+								<textarea onpropertychange="MaxMe(this)" oninput="MaxMe(this)" style="overflow:hidden"></textarea>
+								<input type="submit" class="smt" value="确定" />
+							</form>
+						</div>
+						<div class="cont_left col-lg-6" style="height: 870px;">
+							<div id="editor" style="height: 840px;width: 545px;margin: 0 auto;border: 0;">
+								
+							</div>
+						</div>
+						<div class="cont_rig col-lg-6 xsd_tu">
+							<div class="title col-lg-12">
+								<span class="col-lg-2">标题：</span>
+								<input type="text" placeholder="中国人首次太空泡茶 航天员也能挑食" class="col-lg-10"></input>
+							</div>
+							<div class="title col-lg-12">
+								<span class="col-lg-2">稿件副标题：</span>
+								<input type="text" placeholder="" class="col-lg-10"></input>
+							</div>
+							<div class="inputFileWrapper col-lg-12">
+								<label for="inputFile" class="col-lg-6">
+							        <input type="file" id="inputFile" class="col-lg-6"/>
+							        <span class="custorm-style" class="col-lg-6">
+							            <span class="left-button col-lg-4">上传头像:</span>
+							            <span class="right-text col-lg-8"><img src="../img/bg.png" class="col-lg-12"/></span>
+							       </span>
+							    </label>
+							    <div  class="col-lg-4" id="rightText"/><img src="../img/campaign1.png"/></div>
+							</div>
+							<div class="canal col-lg-12">
+								<span class="col-lg-2">稿件类型:</span>
+								<em class="col-lg-8 cho_b">只能选择一种稿件类型</em>
+							</div>
+							
+							<div class="ckBox col-lg-12" id="ckBox">
+								<div class="col-lg-2" style="padding: 0;"></div>
+								<div class="col-lg-10" style="padding: 0;">
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-5">图文</span></span>
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-5">导购</span></span>
+									<span class="spans col-lg-3"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-9">国际导购</span></span>
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-5">视频</span></span>
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-5">评测</span></span>
+									<span class="spans col-lg-3"><input class="radio col-lg-2" type="radio" name="choose"><span class="wz col-lg-9">国际导购</span></span>
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-5">视频</span></span>
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-5">评测</span></span>
+								</div>
+							</div>
+							<div class="ckBox col-lg-11 col-lg-offset-1" id="ckBox">
+								<span class="col-lg-2">发布平台：</span>
+								<div class="col-lg-10">
+									<span class="spans col-lg-6"><input class="checkbox col-lg-1" type="checkbox" name="choose"><span class="wz col-lg-3">淘达人</span><input type="text" class="ptin col-lg-7"/></span>
+									<span class="spans col-lg-6"><input class="checkbox col-lg-1" type="checkbox" name="choose"><span class="wz col-lg-3">微信</span><input type="text" class="ptin col-lg-7"/></span>
+									<span class="spans col-lg-6"><input class="checkbox col-lg-1" type="checkbox" name="choose"><span class="wz col-lg-3">微博</span><input type="text" class="ptin col-lg-7"/></span>
+									<span class="spans col-lg-6"><input class="checkbox col-lg-1" type="checkbox" name="choose"><span class="wz col-lg-4">今日头条</span><input type="text" class="ptin col-lg-7"/></span>								
+								</div>
+							</div>
+							<div class="canal col-lg-12">
+								<span class="col-lg-2">审核状态:</span>
+								<em class="col-lg-8 cho_b">只能选择一种审核状态</em>
+							</div>
+							
+							<div class="ckBox col-lg-12" id="ckBox">
+								<div class="col-lg-2" style="padding: 0;"></div>
+								<div class="col-lg-10" style="padding: 0;">
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-8">已审核</span></span>
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-8">待审核</span></span>
+									<span class="spans col-lg-2"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-8">未通过</span></span>
+									
+									
+								</div>
+							</div>
+							<div class="excuse col-lg-12">
+								<span class="col-lg-2">审核理由：</span>
+								<textarea class="col-lg-10 tank"></textarea>
+							</div>
+							<div class="thr">
+								<span class="col-lg-2"></span>
+								<a class="col-lg-3 pass">通过</a>
+								<a class="col-lg-3 no_pass">不通过</a>
+							</div>
+							<div class="operate col-lg-12">
+								<span class="col-lg-2">操作日志：</span>
+								<ul class="col-lg-10">
+									<li class="col-lg-12"><em class="col-lg-4">审核默默文章</em><i class="col-lg-5  col-lg-offset-3">2017-2-5 10:00</i></li>
+									<li class="col-lg-12"><em class="col-lg-4">审核默默文章</em><i class="col-lg-5  col-lg-offset-3">2017-2-5 10:00</i></li>
+									<li class="col-lg-12"><em class="col-lg-4">审核默默文章</em><i class="col-lg-5  col-lg-offset-3">2017-2-5 10:00</i></li>
+									<li class="col-lg-12"><em class="col-lg-4">审核默默文章</em><i class="col-lg-5  col-lg-offset-3">2017-2-5 10:00</i></li>
+									<li class="col-lg-12"><em class="col-lg-4">审核默默文章</em><i class="col-lg-5  col-lg-offset-3">2017-2-5 10:00</i></li>
+									<li class="col-lg-12"><em class="col-lg-4">审核默默文章</em><i class="col-lg-5  col-lg-offset-3">2017-2-5 10:00</i></li>
+								</ul>
+							</div>
+							<div class="return">
+								<span class="col-lg-2"></span>
+								<a class="col-lg-3 pass">返回审核</a>
+							</div>
+						</div>
+						<div class="col-lg-6" style="margin-top:-160px">
+							<div class="col-lg-2 anni">按钮</div>
+							<div class="col-lg-3 col-lg-offset-1" style="height: 30px;line-height: 30px;color: #000;font-size: 16px;text-align: right;">优秀案例:</div>
+							<span class="spans col-lg-1" style="margin-top: 5px;font-size: 14px;padding: 0;"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-9" style="font-size: 14px;">是</span></span>
+							<span class="spans col-lg-1" style="margin-top: 5px;font-size: 14px;padding: 0;"><input class="radio col-lg-3" type="radio" name="choose"><span class="wz col-lg-9" style="font-size: 14px;">否</span></span>
+						</div>
+						</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+  function MaxMe(o) {
+      o.style.height = o.scrollTop + o.scrollHeight + "px";
+      var popup_H = -($(".popup").height()/2);
+      console.log(popup_H)
+      $(".popup").css("marginTop", popup_H)
+    }
+  	 
+	var img_H = $(".btm_page ul li img").height();
+	var img_Pt = (60 - img_H) / 2 - 5;
+	img_H = $(".btm_page ul li img").css("marginTop", img_Pt)
+	$(window).resize(function() {
+		img_H = $(".btm_page ul li img").height();
+		img_Pt = (60 - img_H) / 2 - 5
+		img_H = $(".btm_page ul li img").css("marginTop", img_Pt)
+	});
+
+	var  c= true;
+			$(".topLeft .aaaa i").on("click",function(){
+				var el =$(".topLeft ul div"),
+				 curHeight = el.height(),
+    			autoHeight = el.css('height', 'auto').height();
+				if(c==true){
+					el.stop(true).animate({height:"0px"})
+					c=false
+				}else{
+					el.height(curHeight).stop(true).animate({height: autoHeight}, 500);
+					c=true
+				}
+			})
+
+	var fileBtn = $("input[type=file]");
+	fileBtn.on("change", function() {
+		var index = $(this).val().lastIndexOf("\\");
+		var sFileName = $(this).val().substr((index + 1));
+		$("#rightText").html(sFileName);
+	});
+	setTimeout(function() { 
+		
+		},1000) 
+	$(".anni").click(function() {
+		$(".overall_pro").show();
+		$(".popup").show();
+
+	})
+	$(".pop_top em").click(function() {
+		$(".overall_pro").hide();
+		$(".popup").hide();
+
+	})	
+	function BodyOnLoad() 
+{ 
+
+} 
+var editor = new wangEditor('editor');
+				// 上传图片
+				editor.config.uploadImgUrl = '../ouplay';
+				editor.config.uploadParams = {
+					// token1: 'abcde',
+					// token2: '12345'
+				};
+				editor.config.uploadHeaders = {
+						// 'Accept' : 'text/x-json'
+					}
+					// editor.config.uploadImgFileName = 'myFileName';
+					// 隐藏网络图片
+					// editor.config.hideLinkImg = true;
+					// 自定义菜单
+				editor.config.menus = [
+					'bold',
+					'underline',
+					'italic',
+					'alignleft',
+					'aligncenter',
+					'alignright',
+					'img',
+					'uploadImg',
+					' linkImg',
+				];
+				editor.create();
+</script>

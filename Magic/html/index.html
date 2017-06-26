@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>首页</title>
+	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+	<div class="warp">
+		<header class="cf" style="border:0;">
+			<img class="fl logo" src="../img/logo.png" alt="">
+			<div class="user fr cf">
+				<div class="headPortrait fl"><img src="../img/tx.png" alt=""></div>
+				<div class="userName fl">可乐乐</div>
+				<img class="exit fr" src="../img/exit.png" alt="">
+			</div>
+		</header>
+		<ul class="nav">
+			<li>
+				<a href="index.html">
+					<img src="../img/icon1.png" alt=""><span>首页</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="personalInformation.html">
+					<img src="../img/icon2.png" alt=""><span>个人信息</span>
+				</a>
+			</li>
+			<li class="aaa">
+				<a href="contribute.html">
+					<img src="../img/icon3.png" alt=""><span>稿件投稿</span>
+				</a>
+			</li>
+			<li>
+				<a href="settlement.html">
+					<img src="../img/icon4.png" alt=""><span>稿件结算</span>
+				</a>
+			</li>
+			<li>
+				<a href="newsCenter.html">
+					<img src="../img/icon6.png" alt=""><span>新闻中心</span>
+				</a>
+			</li>
+		</ul>
+		<div class="centent">
+			<div class="banner"><img src="../img/banner.png" alt=""></div>
+			<div class="substance cf">
+				<div class="left fl">
+					<ul class="notice" id="notice">
+						<li>
+							<img src="../img/grayBlue.png" alt="">
+							<span>可乐乐，你好，最近30天累积投稿8篇，通过6篇通过率80%,位于所有写手TOP90%</span>
+						</li>
+
+						<li>
+							<img src="../img/grayRed.png" alt="">
+							<span>累积获得稿费800元，已结算600元，未结算200元，位于所有写手TOP60%</span>
+						</li>
+
+						<li>
+							<img src="../img/grayRound.png" alt="">
+							<span>累积获得稿费800元，已结算600元，未结算200元，位于所有写手TOP60%</span>
+						</li>
+					</ul>
+					<div class="statistics cf">
+						<div class="statistic statistic1 fl" id="leftStatistic"></div>
+						<div class="statistic statistic2 fl" id="rightStatistic"></div>
+					</div>
+				</div>
+				<div class="right fr">
+					<div class="title">最近7天优秀文章案例</div>
+					<div class="tableBox" id="tableBox1">
+					<table>
+						<tr>
+							<th>稿件标题</th>
+							<th>昨日阅读</th>
+							<th>7天阅读</th>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+						<tr>
+							<td>[评测]  进口DHC藻油类产品</td>
+							<td>12312</td>
+							<td>133200</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<!--左边导航菜单-->
+	<script type="text/javascript" src="../js/menuSwitch.js"></script>
+	<!--修改滚动条-->
+	<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="../js/scrollBar.js"></script>
+	<!--统计图-->
+	<script type="text/javascript" src="../js/echarts.min.js"></script>
+	<script type="text/javascript">
+	//左边的统计图
+	var aa=[
+    {
+        name:'邮件营销',
+        type:'line',
+        stack: '总量',
+        smooth: true ,
+        data:[200, 300, 400, 450, 400, 300, 250],
+        itemStyle: {
+            normal: {
+                
+                color: '#865a7f'
+            }
+	    },
+	    lineStyle: {
+            normal: {
+                width: 2
+            }
+        }
+
+    },
+    {
+        name:'联盟广告',
+        type:'line',
+        stack: '总量',
+        smooth: true ,
+        data:[220, 320, 380, 430, 390, 380, 380],
+        itemStyle: {
+            normal: {
+                color: '#6ed6c6'
+            }
+	    },
+	    lineStyle: {
+            normal: {
+                width: 2
+            }
+        }
+    },
+    {
+        name:'视频广告',
+        type:'line',
+        stack: '总量',
+        smooth: true ,
+        data:[150, 232, 201, 154, 190, 330, 410],
+        itemStyle: {
+            normal: {
+                color: '#fa6362'
+            }
+	    },
+	    lineStyle: {
+            normal: {
+                width: 2
+            }
+        }
+    },
+];
+
+	//右边的统计图
+
+	var bb=[
+		{
+	        name:'邮件营销',
+	        type:'line',
+	        stack: '总量',
+	        data:[200, 132, 101, 134, 90, 230, 210,400],
+	        itemStyle: {
+	        	normal: {
+	        		areaStyle: {type: 'default'},
+	        		color: '#70bca9'}
+	        	},
+	        
+        	},
+	    {
+	        name:'视频广告',
+	        type:'line',
+	        stack: '总量',
+	        data:[150, 232, 201, 154, 190, 330, 410,400],
+	        itemStyle: {
+	        	normal: {
+	        		areaStyle: {type: 'default'},
+	        		color:'#66c8b4'
+	    		}
+	    	},
+	    }
+	]
+	
+	</script>
+	<script type="text/javascript" src="../js/statisticalChart.js"></script>
+</body>
+</html>

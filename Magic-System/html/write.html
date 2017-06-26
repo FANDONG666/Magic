@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<title>写手管理</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap3-wysihtml5.min.css">
+		<link rel="stylesheet" href="../css/comment.css" />
+		<link rel="stylesheet" href="../css/write.css" />
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/comment.js"></script>
+	</head>
+
+	<body>
+		<div style="background: #000;height: 50px;width: 100%;line-height: 50px;">
+			<div style="float: right;margin-right: 100px;">
+				<a href="JavaScript:void(0);" style="margin-right: 15px;">您好</a>
+				<a href="JavaScript:void(0);" id="logout">退出</a>
+			</div>
+		</div>
+		<div class="topLeft">
+			<p class="log"><img src="../img/log.png" /></p>
+			<ul>
+					<li  class="cread">
+						<a href="write.html"><img src="../img/write.png" /><span>写手管理</span></a>
+					</li>
+					<li class="aaaa">
+						<a href="conventional.html"><img src="../img/system.png" />
+							<span>系统设置</span>							
+						</a>
+						<i>></i>
+					</li>
+					<div>
+						<li>
+							<a href="manager.html">
+								<span>管理员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="chann.html">
+								<span>渠道管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="new_media.html">
+								<span>媒体管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="password.html">
+								<span>邀请码管理</span>
+							</a>
+						</li>
+					</div>
+					<li>
+						<a href="contribution.html"><img src="../img/manage.png" /><span>稿件管理</span></a>
+					</li>
+					<li>
+						<a href="JavaScript:;"><img src="../img/new.png" /><span>消息中心</span></a>
+					</li>
+					<li>
+						<a href="balance.html"><img src="../img/balance.png" /><span>结算中心</span></a>
+					</li>
+				</ul>
+		</div>
+		<p class="topP"></p>
+		<div class="content-wrapper" style="padding: 0;margin-left: 224px;margin-right: 20px;" id="topR">
+			<div class="row" style="margin: 0;">
+				<div class="col-lg-12 posD">
+					<img src="../img/pst.png" />
+					<a href="index_index.html">首页</a>
+					<span>></span>
+					<a href="write.html">写手管理</a>
+				</div>
+				<div class="col-lg-12 screen">
+					<p>稿件列表筛选</p>
+					<h5><span>待审核</span>(<em>50</em>)</h4>
+						<h4><span>已审核</span>(<em>50</em>)</h4>
+						
+					</div>
+					<div class="col-lg-12 navs">
+						<p class="col-lg-1">渠道：</p>
+						<ul class="col-lg-11">							
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+						</ul>
+						<p class="col-lg-1">领域：</p>
+						<ul class="col-lg-11">
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+							<li><a href="javascript:;">图文(<span>22</span>)</a></li>
+						</ul>
+						<p class="col-lg-1">所属媒体：</p>
+						<ul class="col-lg-11">
+							
+							<li><a href="javascrit:;">太大人</a></li>
+							<li><a href="javascrit:;">微信</a></li>
+							<li><a href="javascrit:;">今日头条</a></li>							
+						</ul>
+						<form action="" method="post" class="col-lg-12">
+							<span class="col-lg-1">写手指数：</span>
+							<input type="text" class="tex2 col-lg-1"/>
+							<em class="col-lg-1"></em>
+							<input type="text" class="tex2 col-lg-1"/>
+							<input type="text" placeholder="输入搜索内容" id="tex" class="col-lg-3"/>
+							<input type="button" value="搜索" id="sbm" class="col-lg-1"/>
+						</form>
+					</div>
+					<div class="col-lg-12 btm_page">
+						<div class="classify">
+							<span class="col-lg-1">编号</span>
+							<span class="col-lg-1">写手姓名</span>
+							<span class="col-lg-1">擅长领域</span>
+							<span class="col-lg-1">所属媒体</span>
+							<span class="col-lg-2">所属媒体</span>
+							<span class="col-lg-2">拥有渠道</span>
+							<span class="col-lg-2">写手指数</span>
+							<span class="col-lg-2">待审核稿数</span>
+							
+						</div>
+						<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1"><a href="detail.html#">宋海清</a></li>
+							<li class="col-lg-1"> 图文</li>
+							<li class="col-lg-1">欧式家具</li>
+							<li class="col-lg-2"> 赏金评测</li>
+							<li class="col-lg-2"> 69 </li>
+							<li class="col-lg-2"> 5</li>
+							<li class="col-lg-2">有</li>
+							
+						</ul>
+						<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1"><a href="detail.html#">宋海清</a></li>
+							<li class="col-lg-1"> 图文</li>
+							<li class="col-lg-1">欧式家具</li>
+							<li class="col-lg-2"> 赏金评测</li>
+							<li class="col-lg-2"> 69 </li>
+							<li class="col-lg-2"> 5</li>
+							<li class="col-lg-2">有</li>
+							
+						</ul>
+							<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1"><a href="detail.html#">宋海清</a></li>
+							<li class="col-lg-1"> 图文</li>
+							<li class="col-lg-1">欧式家具</li>
+							<li class="col-lg-2"> 赏金评测</li>
+							<li class="col-lg-2"> 69 </li>
+							<li class="col-lg-2"> 5</li>
+							<li class="col-lg-2">有</li>
+							
+						</ul>
+							<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1"><a href="detail.html#">宋海清</a></li>
+							<li class="col-lg-1"> 图文</li>
+							<li class="col-lg-1">欧式家具</li>
+							<li class="col-lg-2"> 赏金评测</li>
+							<li class="col-lg-2"> 69 </li>
+							<li class="col-lg-2"> 5</li>
+							<li class="col-lg-2">有</li>
+							
+						</ul>
+							<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1"><a href="detail.html#">宋海清</a></li>
+							<li class="col-lg-1"> 图文</li>
+							<li class="col-lg-1">欧式家具</li>
+							<li class="col-lg-2"> 赏金评测</li>
+							<li class="col-lg-2"> 69 </li>
+							<li class="col-lg-2"> 5</li>
+							<li class="col-lg-2">有</li>
+							
+						</ul>
+							<ul class="col-lg-12">
+							<li class="col-lg-1">1</li>
+							<li class="col-lg-1"><a href="detail.html#">宋海清</a></li>
+							<li class="col-lg-1"> 图文</li>
+							<li class="col-lg-1">欧式家具</li>
+							<li class="col-lg-2"> 赏金评测</li>
+							<li class="col-lg-2"> 69 </li>
+							<li class="col-lg-2"> 5</li>
+							<li class="col-lg-2">有</li>
+							
+						</ul>
+						<div class="col-lg-12 btm_p">
+							<p><span><<</span><em>1</em><em>2</em><em>3</em><em>4</em><em>5</em><span class="pre_r">>></span></p>
+						</div>
+						</div>
+					
+					<!--<div class="col-lg-6 col-lg-offset-3" style="background-color: #dedef8;box-shadow: 
+	        inset 1px -1px 1px #444, inset -1px 1px 1px #444;">-->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+ var img_H= $(".btm_page ul li img").height();;
+ var img_Pt=(60 -img_H)/2-5;
+  img_H = $(".btm_page ul li img").css("marginTop",img_Pt)
+	$(window).resize(function(){
+  img_H = $(".btm_page ul li img").height();
+ 	img_Pt=(60 -img_H)/2-5 
+  img_H = $(".btm_page ul li img").css("marginTop",img_Pt)
+});
+
+var  c= true;
+			$(".topLeft .aaaa i").on("click",function(){
+				var el =$(".topLeft ul div"),
+				 curHeight = el.height(),
+    			autoHeight = el.css('height', 'auto').height();
+				if(c==true){
+					el.stop(true).animate({height:"0px"})
+					c=false
+				}else{
+					el.height(curHeight).stop(true).animate({height: autoHeight}, 500);
+					c=true
+				}
+			})
+</script>

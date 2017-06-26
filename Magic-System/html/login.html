@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>登录</title>
+	<link rel="stylesheet" href="../css/comment.css" />
+	<link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+	<div class="content">
+		<div class="top">
+			<img src="../img/log.png" alt="">
+			<div class="welcome">欢迎回来</div>
+			<div class="loginAccount">请登录您的账户</div>
+		</div>
+		<form action="index_index.html" method="post">
+			<input type="text" placeholder="用户名">
+			<input type="text" placeholder="密码">
+			<!-- <input type="checkbox"> -->
+			<span class="cbox" onclick="this.className=/checked/ig.test(this.className)?this.className.replace('checked',''):(this.className+' checked')"></span>
+			<span class="remember">记住我</span>
+			<input type="submit" value="登录">
+		</form>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="../js/fullScreen.js"></script>
+</body>
+</html>

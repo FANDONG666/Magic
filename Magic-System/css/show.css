@@ -1,0 +1,61 @@
+/*首页*/
+.topP{height: 65px;background: #FFFFFF;}
+.posD{height: 50px;}
+.posD img{height: 20px;margin-top: 3px;margin-right: 10px;display: inline-block;}
+.posD a{margin-right: 10px;display: inline-block;height: 50px;line-height: 50px;font-size: 12px;color: #333333;text-decoration: none;}
+.posD span{margin-right: 10px;display: inline-block;height: 50px;line-height: 50px;font-size: 12px;color: #333333;}
+.posD a:hover{color: #fd0000;}
+.screen{height: 48px;margin: 0 0 1px;background: #FFFFFF;padding-left: 7px;border-bottom: 1px solid #ebebeb;}
+.screen span{float: left;font-size: 18px;width: 106px;height: 34px;line-height: 34px;margin-top: 9px;text-align: center;}
+.screen .span1{background: #1d89cf;color: #fff;}
+.screen .span2{margin-left: 12px;color: #333333;}
+.navs{background: #FFF;margin-bottom: 12px;}
+.navs p{height: 30px;margin-top:10px;margin-bottom: 10px;text-align: right;color: #aaaaaa;padding: 0;line-height: 30px;}
+.navs ul{height: 30px;margin-top:10px;margin-bottom: 10px;}
+.navs li{float: left;margin-right: 15px;height: 30px;line-height: 30px;font-size: 14px;padding: 0 5px;}
+.navs li:hover{background: #23649e;}
+.navs li:hover a{color: #fff;}
+.navs li:hover span{color: #fff;}
+.navs li a{color: #bfbfbf;}
+.navs li span{color: #bfbfbf;}
+.navs a{text-decoration: none;}
+.navs select{padding: 0;height: 40px;}
+#tex{margin-left: 37px;border: 1px solid #e3e3e3;border-radius: 3px;height: 40px;font-size: 14px;color: #999;}
+#sbm{height: 40px;line-height: 40px;background: #FFFFFF;border: 1px solid #e3e3e3;border-left: 0;}
+.btm_page{background: #FFFFFF;margin-bottom: 30px;position: relative;}
+.classify{height: 60px;font-size: 14px;line-height: 60px;}
+.classify span{color: #000000;text-align: center;}
+.btm_page li{text-align: center;height: 64px;line-height: 64px;}
+.btm_page ul{padding: 0;}
+.btm_page ul:nth-child(even){background: #f9f9f9;}
+.btm_page li img{padding: 8px;vertical-align: middle;}
+.btm_p{height: 90px;background: #FFFFFF;}
+.btm_p p{width: 345px;margin-top: 20px;border: 1px solid #CCCCCC;float: right;height: 30px;} 
+.btm_p span{cursor: pointer;display: inline-block;width: 49px;height: 30px;line-height: 30px;text-align: center;font-size: 14px;border-right: 1px solid #999;}
+.btm_p em{cursor: pointer;display: inline-block;width: 49px;height: 30px;line-height: 30px;text-align: center;font-size: 14px;color: #000;border-right: 1px solid #999;}
+.btm_p .pre_r{border: 0;}
+.btm_p span:hover{background: #204D74;color: #FFFFFF;}
+.btm_p em:hover{color: #D43F3A;}
+.btm_page ul li span{color: #07ac55;text-align: right;padding: 0;cursor: pointer;}
+.btm_page ul li em{color: #b7444d;text-align: left;padding: 0;cursor: pointer;}
+.btm_page ul li i{color: #b7444d;}
+.btm_page ul li strong{color: #07ac55;}
+.popup{position: absolute;left: 50%;top:-10px;width: 470px;
+height: 315px;margin-left: -235px;background: #fff;z-index: 99;display: none ;}
+.popup .pop_top{height: 59px;border-bottom: 1px solid #CCCCCC;position: relative;}
+.popup .pop_top span{display: inline-block;height: 59px;line-height: 59px;font-size: 14px;color: #333;text-indent: 1em;}
+.popup .pop_top em{position: absolute;top: 13px;right: 15px;font-size: 18px;color: #000;cursor: pointer;}
+.popup form{margin: 13px 15px 0 15px;display: block;}
+.popup form div{height: 40px;width: 100%;font-size: 14px;color: #333;margin-bottom: 15px;}
+.popup form div .tex{height: 38px;width: 234px;border: 1px solid #CCCCCC;line-height: 38px;color: #000;font-size: 14px;text-indent: 1em;}
+.popup form div span{margin-left: 80px;margin-right: 10px;color: #000;font-size: 16px;}
+.popup form .smt{width: 140px;height: 42px;background: #07ac55;font-size: 16px;text-align: center;line-height: 42px;color: #FFFFFF;margin-left: 140px;margin-top: 15px;border-radius: 3px;}
+.overall_pro{position: absolute;height: 1000px;width: 100%;background: rgba(0,0,0,0.3);z-index: 99;display: none;}
+.medi{height: 60px;width: 321px;background: #fff;margin-bottom: 15px;cursor: pointer;}
+.medi img{float: left;margin-left: 70px;margin-top: 8px;height: 35px;}
+form{background: #fff;padding-top: 21px;}
+form p{margin-bottom: 15px;font-size: 16px;}
+form p span{color:#555;text-align: right;}
+form p input{display: inline-block; height: 36px;border: 1px solid #e3e3e3;border-radius: 5px;color:#333;font-size: 16px;}
+.submit{display: block;height: 50px;line-height: 50px;text-align: center;color:#fff;background: #07ac55;font-size: 20px;}
+.screen a{display: inline-block;width: 106px;height: 34px;line-height: 34px;font-size: 16px;text-align: center;margin-top: 10px;}

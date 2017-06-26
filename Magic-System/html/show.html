@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<title>系统设置-显示设置</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap3-wysihtml5.min.css">
+		<link rel="stylesheet" href="../css/comment.css" />
+		<link rel="stylesheet" href="../css/show.css" />
+		<link rel="stylesheet" href="../css/left_com.css" />
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div style="background: #000;height: 50px;width: 100%;line-height: 50px;">
+				<div style="float: right;margin-right: 100px;">
+					<a href="JavaScript:void(0);" style="margin-right: 15px;">您好</a>
+					<a href="JavaScript:void(0);" id="logout">退出</a>
+				</div>
+			</div>
+			<div class="topLeft">
+				<p class="log"><img src="../img/log.png" /></p>
+				<ul>
+					<li>
+						<a href="write.html"><img src="../img/write.png" /><span>写手管理</span></a>
+					</li>
+					<li class="aaaa cread">
+						<a href="conventional.html"><img src="../img/system.png" />
+							<span>系统设置</span>							
+						</a>
+						<i>></i>
+					</li>
+					<div>
+						<li>
+							<a href="manager.html">
+								<span>管理员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="chann.html">
+								<span>渠道管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="new_media.html">
+								<span>媒体管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="password.html">
+								<span>邀请码管理</span>
+							</a>
+						</li>
+					</div>
+					<li>
+						<a href="contribution.html"><img src="../img/manage.png" /><span>稿件管理</span></a>
+					</li>
+					<li>
+						<a href="JavaScript:;"><img src="../img/new.png" /><span>消息中心</span></a>
+					</li>
+					<li>
+						<a href="balance.html"><img src="../img/balance.png" /><span>结算中心</span></a>
+					</li>
+				</ul>
+			</div>
+			<!--遮罩层不用写数据-->
+			<div class="overall_pro"></div>
+			<p class="topP"></p>
+			<div class="content-wrapper" style="padding: 0;margin-left: 224px;margin-right: 20px;" id="topR">
+				<div class="row" style="margin: 0;">
+					<div class="col-lg-12 posD">
+						<img src="../img/pst.png" />
+						<a href="index_index.html">首页</a>
+						<span>></span>
+						<a href="show.html">系统设置</a>
+					</div>
+					<div class="col-lg-12 screen">
+						<a href="conventional.html" class="span2">常规显示</a>
+						<a href="show.html" class="span1">显示设置</a>
+					</div>
+					<form action="" method="post" class="col-lg-12">
+						<p class="col-lg-12"><span class="col-lg-2">略缩图宽度：</span><input class="col-lg-10" type="text"></p>
+						<p class="col-lg-12"><span class="col-lg-2">略缩图高度：</span><input class="col-lg-10" type="text"></p>
+						<p class="col-lg-12"><span class="col-lg-2">价格保留小数位数：</span><input class="col-lg-10" type="text"></p>
+						<p class="col-lg-12"><span class="col-lg-2">文章列表数量：</span><input class="col-lg-10" type="text"></p>
+						<p class="col-lg-12"><span class="col-lg-2">首页文章展示数量：</span><input class="col-lg-10" type="text"></p>
+						<p class="col-lg-12"><span class="col-lg-2">商品列表数量：</span><input class="col-lg-10" type="text"></p>
+						<p class="col-lg-12"><span class="col-lg-2">首页展示商品数量：</span><input class="col-lg-10" type="text"></p>
+
+						<p class="col-lg-12"><span class="col-lg-2"></span><input class="col-lg-2 submit" type="submit" value="提交"></p>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	var  c= true;
+			$(".topLeft .aaaa i").on("click",function(){
+				var el =$(".topLeft ul div"),
+				 curHeight = el.height(),
+    			autoHeight = el.css('height', 'auto').height();
+				if(c==true){
+					el.stop(true).animate({height:"0px"})
+					c=false
+				}else{
+					el.height(curHeight).stop(true).animate({height: autoHeight}, 500);
+					c=true
+				}
+			})
+</script>

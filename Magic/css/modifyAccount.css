@@ -1,0 +1,78 @@
+form{
+	width:735px;
+	margin: 41px auto 0px;
+	font-size: 16px;
+}
+.p1{
+	margin-left: 250px;
+	margin-bottom: 56px;
+}
+p{
+	margin-top: 35px;
+}
+input{
+	width:240px;
+	height: 33px;
+	border:1px solid #aaa;
+	margin-left: 26px;
+	text-indent: 20px;
+}
+.over{
+	display: inline-block;
+	position: relative;
+	left:22px;
+	top:5px;
+}
+.iptName1{
+	margin-left: 6em;
+}
+.iptName2{
+	margin-left: 7em;
+}
+.iptName4{
+	margin-left: 2em;
+}
+#btn{
+	display: inline-block;
+	border: none;
+	width:127px;
+	height: 31px;
+	margin-left: 20px;
+	background: #ff6549;
+	color:#fff;
+	font-size: 12px;
+	line-height: 31px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	text-indent: 0px;
+}
+.hideSpan2{
+	font-size: 12px;
+	color:#ff6549;
+	margin-left: 37px;
+}
+.yzm{
+	width:106px;
+	margin-left: 22px;
+	cursor: pointer;
+}
+.yzsj{
+	width:127px;
+	margin-left: 12px;
+}
+.submit{
+	display: block;
+	width:140px;
+	height: 38px;
+	margin: 85px 0px 0px 220px;
+	background: #ff6549;
+	border-radius: 5px;
+	color:#fff;
+	font-size: 14px;
+	line-height: 38px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	text-indent: 0px;
+}

@@ -1,0 +1,56 @@
+form{
+	width:760px;
+	margin: 77px auto 0px;
+}
+.outer{
+	width:760px;
+	margin-top: 30px;
+}
+.over{
+	display: inline-block;
+	position: relative;
+	left:22px;
+	top:5px;
+}
+input{
+	width:240px;
+	height: 33px;
+	border:1px solid #aaa;
+	margin-left: 31px;
+	text-indent: 20px;
+}
+#btn{
+	display: inline-block;
+	border: none;
+	width:127px;
+	height: 31px;
+	margin-left: 20px;
+	background: #ff6549;
+	color:#fff;
+	font-size: 12px;
+	line-height: 31px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	text-indent: 0px;
+}
+.hideSpan2{
+	font-size: 12px;
+	color:#ff6549;
+	margin-left: 37px;
+}
+.next{
+	display: block;
+	width:140px;
+	height: 38px;
+	margin: 70px 0px 0px 120px;
+	font-size: 14px;
+	color:#fff;
+	line-height: 38px;
+	text-align: center;
+	background: #ff6549;
+	border-radius: 5px;
+}
+.next:active{
+	background: #ccc;
+}

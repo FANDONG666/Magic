@@ -1,0 +1,44 @@
+form{
+	width:510px;
+	margin: 70px auto 0px;
+}
+p{
+	margin-top: 30px;
+}
+input{
+	width:240px;
+	height: 33px;
+	border:1px solid #aaa;
+	margin-left: 26px;
+	text-indent: 20px;
+}
+.hideImg{
+	display: inline-block;
+	position: relative;
+	left:22px;
+	top:5px;
+}
+.xh{
+	color:#ff6549;
+	position: relative;
+	top:2px;
+}
+.wzName1{
+	margin-left: 1em;
+}
+.p3{margin-left: 30px;}
+.next{
+	display: inline-block;
+	width:140px;
+	height: 38px;
+	margin: 70px 0px 0px 30px;
+	font-size: 14px;
+	color:#fff;
+	line-height: 38px;
+	text-align: center;
+	background: #ff6549;
+	border-radius: 5px;
+}
+.next:active{
+	background: #ccc;
+}
